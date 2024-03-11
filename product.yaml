@@ -1,0 +1,80 @@
+info:
+  name: product
+  title: Product
+  version: 1.0.0
+  description: >-
+    Este producto permite obtener y gestionar toda la informacion de los productos o servicios ofrecidos por el banco
+  contact:
+    name: Giorman API Portal
+    email: soporteapisinternas@giorman.com.co
+  summary: ''
+gateways:
+  - datapower-api-gateway
+plans:
+  default:
+    title: Default Plan
+    description: Default Plan
+    approval: false
+    rate-limits:
+      default:
+        value: 100/hour
+    apis:
+      product-information:
+        operations:
+          - path: /retrieve
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /retrieveList
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /health
+            operation: head
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 1/1second
+      product-management:
+        operations:
+          - path: /create
+            operation: post
+            rate-limits:
+              default:
+                hard-limit: true
+                value: 100/1second
+          - path: /modify
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /delete
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /health
+            operation: head
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 1/1second
+apis:
+  product-information:
+    name: product-information:1.0.0
+  product-management:
+    name: product-management:1.0.0
+visibility:
+  subscribe:
+    enabled: true
+    type: authenticated
+  view:
+    enabled: true
+    type: public
+product: 1.0.0

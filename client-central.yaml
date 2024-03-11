@@ -1,0 +1,74 @@
+info:
+  name: client-central
+  title: Client Central
+  version: 1.0.0
+  description: >-
+    Este producto permite obtener y gestionar toda la informacion de nuestros clientes
+  contact:
+    name: Giorman API Portal
+    email: soporteapisinternas@giorman.com.co
+  summary: ''
+gateways:
+  - datapower-api-gateway
+plans:
+  default:
+    title: Default Plan
+    description: Default Plan
+    approval: true
+    rate-limits:
+      default:
+        value: 100/hour
+    apis:
+      client-central-information:
+        operations:
+          - path: /retrieve
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /health
+            operation: head
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 1/1second
+      client-central-management:
+        operations:
+          - path: /create
+            operation: post
+            rate-limits:
+              default:
+                hard-limit: true
+                value: 100/1second
+          - path: /modify
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /delete
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /health
+            operation: head
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 1/1second
+apis:
+  client-central-information:
+    name: client-central-information:1.0.0
+  client-central-management:
+    name: client-central-management:1.0.0
+visibility:
+  subscribe:
+    enabled: true
+    type: authenticated
+  view:
+    enabled: true
+    type: public
+product: 1.0.0

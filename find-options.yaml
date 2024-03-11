@@ -1,0 +1,52 @@
+info:
+  name: find-options
+  title: Find Options
+  version: 1.0.0
+  description: >-
+    Este producto permite obtener informacion de los clientes con los productos que se ajudtan a su perfil.
+  contact:
+    name: Giorman API Portal
+    email: soporteapisinternas@giorman.com.co
+  summary: ''
+gateways:
+  - datapower-api-gateway
+plans:
+  default:
+    title: Default Plan
+    description: Default Plan
+    approval: false
+    rate-limits:
+      default:
+        value: 100/hour
+    apis:
+      find-options-information:
+        operations:
+          - path: /retrieve
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /retrieveList
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /health
+            operation: head
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 1/1second
+apis:
+  find-options-information:
+    name: find-options-information:1.0.0
+visibility:
+  subscribe:
+    enabled: true
+    type: authenticated
+  view:
+    enabled: true
+    type: public
+product: 1.0.0
