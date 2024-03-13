@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "_messageId": "9f7d756a-3bfb-48f3-bf72-c6c081ec41c3",
+    "_requestDateTime": "2023-10-19T16:10:02+00:00",
+    "_applicationId": "3356052063a1e43056e70662805d73d5"
+  },
+  "data": {
+    "identity": {
+      "CID": "U1A6F5A2DAD204D90BE70063A56B9982A",
+      "stateAlias": "ACTIVO",
+      "AID": "A074A2E33025949D8905902DDD618A059"
+    },
+    "identification": {
+      "number": "1640205937937",
+      "type": "CC"
+    },
+    "relations": [
+      {
+        "role": {
+          "identifier": "ROL0000000000000000",
+          "status": "Activo",
+          "name": "TITULAR"
+        },
+        "identifier": "RELFTO7YIYEN2W4G4DK",
+        "status": "Activo",
+        "owner": {
+          "identification": {
+            "mdmKey": "5622779",
+            "number": "1640205937937",
+            "type": "CC"
+          }
+        }
+      }
+    ]
+  }
+}

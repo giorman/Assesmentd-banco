@@ -1,0 +1,12 @@
+{
+  "data": {
+    "code": "56478",
+    "title": "Tarjeta Debito",
+    "description": "Tarjeta Debito de la Franquicia mastercard",
+    "conditions": {
+      "age": "18",
+      "nationality": "Colombia",
+      "income": "500000"
+    }
+  }
+}

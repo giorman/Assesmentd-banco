@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "_messageId": "0abd1dcf-540c-44ec-a2a5-91f0d7eba99c",
+    "_requestDateTime": "2023-11-16T22:15:52+00:00",
+    "_applicationId": "72cb198f3d81d0788a02c56287b3a3f7"
+  },
+  "data": {
+    "identity": {
+      "CID": "U64DE38E8206A43E3B10FB9ECF83C6BB8",
+      "stateAlias": "ACTIVO",
+      "AID": "A9C64CA09C7DE469C8160F8E308BAD057"
+    },
+    "identification": {
+      "number": "180427043217",
+      "type": "CE"
+    },
+    "relations": [
+      {
+        "role": {
+          "identifier": "ROLPCS3KSR27139EH11",
+          "status": "Activo",
+          "name": "Rol update 12123"
+        },
+        "identifier": "RELLD6BCVCM6CP3K8Q4",
+        "status": "Activo",
+        "owner": {
+          "identification": {
+            "mdmKey": "20035",
+            "number": "1427043321",
+            "type": "CC"
+          }
+        }
+      },
+      {
+        "role": {
+          "identifier": "ROLPCS3KSR27139EH11",
+          "status": "Activo",
+          "name": "Rol update 12123"
+        },
+        "identifier": "RELLD6BCVCM6CP3K8Q2",
+        "status": "Activo",
+        "owner": {
+          "identification": {
+            "mdmKey": "20035",
+            "number": "1427043321",
+            "type": "CC"
+          }
+        }
+      },
+      {
+        "role": {
+          "identifier": "ROL0000000000000007",
+          "status": "Activo",
+          "name": "TITULAR"
+        },
+        "identifier": "RELLD6BCVCM6CP3K8QY",
+        "status": "Activo",
+        "owner": {
+          "identification": {
+            "mdmKey": "20035",
+            "number": "180427043217",
+            "type": "CE"
+          }
+        }
+      },
+      {
+        "role": {
+          "identifier": "ROL0000000000000007",
+          "status": "Activo",
+          "name": "TITULAR"
+        },
+        "identifier": "RELDATACAPA00000001",
+        "status": "Activo",
+        "owner": {
+          "identification": {
+            "mdmKey": "000001",
+            "number": "1122334455",
+            "type": "CC"
+          }
+        }
+      },
+      {
+        "role": {
+          "identifier": "ROL0000000000000007",
+          "status": "Activo",
+          "name": "TITULAR"
+        },
+        "identifier": "RELDATACAPA00000002",
+        "status": "Activo",
+        "owner": {
+          "identification": {
+            "mdmKey": "000001",
+            "number": "1122334455",
+            "type": "CC"
+          }
+        }
+      },
+      {
+        "role": {
+          "identifier": "ROLUV9PQZTH0LJF32ZH",
+          "status": "Activo",
+          "name": "Mi contador JS"
+        },
+        "identifier": "RELLD6BCVCM6CP3K8Q1",
+        "status": "Inactivo",
+        "owner": {
+          "identification": {
+            "mdmKey": "20035",
+            "number": "1427043321",
+            "type": "CC"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "data": {
+    "filters": {
+      "country": "Colombia",
+      "income": {
+        "min": "100000",
+        "max": "2000000"
+      },
+      "age": {
+        "min": "25",
+        "max": "30"
+      }
+    }
+  },
+  "pagination": {
+    "pageSize": 10,
+    "pageNumber": 1
+  }
+}

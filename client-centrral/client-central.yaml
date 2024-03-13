@@ -1,0 +1,81 @@
+info:
+  name: client-central
+  title: Client Central
+  version: 1.0.0
+  description: >-
+    Este producto ofrece una solución completa para la adquisición y gestión de
+    información de los clientes de nuestro banco. Con esta capacidad el banco
+    puede recopilar, almacenar y administrar eficazmente todos los datos
+    relevantes de sus clientes en un solo lugar.
+
+    Esto no solo facilita la personalización de servicios financieros, sino que
+    también mejora la seguridad de los datos y la toma de decisiones informadas
+    por parte del banco.
+  contact:
+    name: Giorman API Portal
+    email: soporteapisinternas@giorman.com.co
+  summary: ''
+gateways:
+  - datapower-api-gateway
+plans:
+  default:
+    title: Default Plan
+    description: Default Plan
+    approval: true
+    rate-limits:
+      default:
+        value: 100/hour
+    apis:
+      client-central-information:
+        operations:
+          - path: /retrieve
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /retrieveList
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /health
+            operation: head
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 1/1second
+      client-central-management:
+        operations:
+          - path: /create
+            operation: post
+            rate-limits:
+              default:
+                hard-limit: true
+                value: 100/1second
+          - path: /modify
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /health
+            operation: head
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 1/1second
+apis:
+  client-central-information:
+    name: client-central-information:1.0.0
+  client-central-management:
+    name: client-central-management:1.0.0
+visibility:
+  subscribe:
+    enabled: true
+    type: authenticated
+  view:
+    enabled: true
+    type: public
+product: 1.0.0

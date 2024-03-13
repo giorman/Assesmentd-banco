@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.bancolombia.TestParallel" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-12T06:05:10" hostname="GIORMAN-RODRIGU" time="6.914">
+  <properties/>
+  <testcase name="testAll()" classname="co.com.bancolombia.TestParallel" time="6.914"/>
+  <system-out><![CDATA[01:05:11.068 [Test worker] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @unitTest
+01:05:11.666 [Test worker] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+01:05:12.973 [Test worker] DEBUG com.intuit.karate - over-writing existing variable 'oasUrl' with new value: oasUrl
+01:05:13.233 [Test worker] DEBUG com.intuit.karate - request:
+1 > POST https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/client-central-information/retrieve
+1 > client-id: 81b0af8081335b326a4040abcfe16e86
+1 > client-secret: c4c99959ccfd61e30e11f15ac75e4aff
+1 > accept: application/json
+1 > message-id: d8d88d3a-4c53-447b-8f3f-18c4c47c2a42
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 65
+1 > Host: api.us-east-a.apiconnect.ibmappdomain.cloud
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.17)
+1 > Accept-Encoding: gzip,deflate
+{"data":{"identification":{"number":"419874561698","type":"CC"}}}
+
+01:05:13.969 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 731
+1 < 200
+1 < Date: Tue, 12 Mar 2024 06:05:14 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < report-to: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1710223514&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=LjLAoMSdnD%2BDmbOFe4UwQeWrtenotJvalSZ8kpnbxls%3D"}]}
+1 < reporting-endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1710223514&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=LjLAoMSdnD%2BDmbOFe4UwQeWrtenotJvalSZ8kpnbxls%3D
+1 < nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < access-control-allow-methods: GET,PUT,POST,DELETE,OPTIONS
+1 < access-control-allow-headers: X-Requested-With,Content-Type,Cache-Control,access_token
+1 < etag: "1159266875"
+1 < via: 1.1 vegur
+1 < x-global-transaction-id: ee3d8f1e65eff09a01ca19f0
+1 < x-ratelimit-limit: name=rate-limit-1,100;
+1 < x-ratelimit-remaining: name=rate-limit-1,99;
+1 < x-envoy-upstream-service-time: 72
+1 < CF-Cache-Status: DYNAMIC
+1 < Server: cloudflare
+1 < CF-RAY: 863197628b193edc-BOG
+{"data":{"income":"500000","country":"colombia","address":"763 Courtney Islands","phonenumber":"1-776-412-1787 x2448","uic":"a55c3068ecdd0b2b18c11994","firstName":"Delphia","identification":{"number":"41987456169","type":"CC"},"secondSurname":"Rory","department":"Missouri","firstSurname":"White","age":"25","email":"Maud_Kertzmann@hotmail.com","secondName":"Janelle"},"meta":{"_requestDateTime":"2037-02-16T11:51:26.292Z","_applicationId":"80a48196-caa4-4410-8828-f0c66a92ec1f","_messageId":"a01358bd-fd72-41a7-a595-1ffba89e433b"}}
+01:05:15.005 [Test worker] DEBUG com.intuit.karate - over-writing existing variable 'oasUrl' with new value: oasUrl
+01:05:15.013 [Test worker] DEBUG com.intuit.karate - request:
+1 > POST https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/client-central-information/retrieveList
+1 > client-id: 81b0af8081335b326a4040abcfe16e86
+1 > client-secret: c4c99959ccfd61e30e11f15ac75e4aff
+1 > accept: application/json
+1 > message-id: d4a84261-c464-4e99-8493-28f0deb3c322
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.us-east-a.apiconnect.ibmappdomain.cloud
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.17)
+1 > Accept-Encoding: gzip,deflate
+{"pagination":{"pageNumber":1,"pageSize":10},"data":{"filters":{"income":{"min":"100000","max":"2000000"},"country":"Colombia","age":{"min":"25","max":"30"}}}}
+
+01:05:15.419 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 404
+1 < 200
+1 < Date: Tue, 12 Mar 2024 06:05:15 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < report-to: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1710223515&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=MeVZ4fzsCsjgFC7UAA9%2F7I34kwVHioXGdOY0lhchXJI%3D"}]}
+1 < reporting-endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1710223515&sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&s=MeVZ4fzsCsjgFC7UAA9%2F7I34kwVHioXGdOY0lhchXJI%3D
+1 < nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+1 < x-powered-by: Express
+1 < access-control-allow-origin: *
+1 < access-control-allow-methods: GET,PUT,POST,DELETE,OPTIONS
+1 < access-control-allow-headers: X-Requested-With,Content-Type,Cache-Control,access_token
+1 < etag: "-1453587007"
+1 < via: 1.1 vegur
+1 < x-global-transaction-id: 4bbf985465eff09b00f89bb1
+1 < x-ratelimit-limit: name=rate-limit-1,100;
+1 < x-ratelimit-remaining: name=rate-limit-1,99;
+1 < x-envoy-upstream-service-time: 66
+1 < CF-Cache-Status: DYNAMIC
+1 < Server: cloudflare
+1 < CF-RAY: 8631976bac64f7a0-BOG
+{"data":{"clients":[{"income":"500000","country":"Colombia","address":"159 Little Freeway","city":"Edinburg","phonenumber":"877-280-7083","uic":"1","firstName":"Peter","identification":{"number":"41987456169","type":"CC"},"secondSurname":"Harper","department":"Maryland","firstSurname":"Von","age":"25","email":"Tyra.Pagac@gmail.com","secondName":"Jaquelin"},{"income":"500000","country":"Colombia","address":"1346 Jenkins Cape","city":"Rockwall","phonenumber":"575.495.9325 x319","uic":"2","firstName":"Felicity","identification":{"number":"41987456169","type":"CC"},"secondSurname":"Ryan","department":"Louisiana","firstSurname":"Thompson","age":"25","email":"Lafayette_Walker48@hotmail.com","secondName":"Sandrine"},{"income":"500000","country":"Colombia","address":"85844 Hahn Mount","city":"Woodbury","phonenumber":"428-683-9202 x86593","uic":"3","firstName":"Gino","identification":{"number":"41987456169","type":"CC"},"secondSurname":"Noah","department":"Pennsylvania","firstSurname":"Gusikowski","age":"25","email":"Hassie.Jast59@hotmail.com","secondName":"Thelma"},{"income":"500000","country":"Colombia","address":"94463 Beatty Shoal","city":"Asheville","phonenumber":"821.441.5410 x8540","uic":"4","firstName":"Luther","identification":{"number":"41987456169","type":"CC"},"secondSurname":"Micah","department":"Iowa","firstSurname":"Kris","age":"25","email":"Tito_McGlynn37@yahoo.com","secondName":"Gia"},{"income":"500000","country":"Colombia","address":"91449 Kozey Key","city":"Wesley Chapel","phonenumber":"(778) 737-3930 x78247","uic":"5","firstName":"Malinda","identification":{"number":"41987456169","type":"CC"},"secondSurname":"Bailey","department":"Kentucky","firstSurname":"Schoen","age":"25","email":"Clementina.Torphy@yahoo.com","secondName":"Mohammad"},{"income":"500000","country":"Colombia","address":"597 Beahan Unions","city":"Redmond","phonenumber":"842.545.4434","uic":"6","firstName":"Earnestine","identification":{"number":"41987456169","type":"CC"},"secondSurname":"Gray","department":"Utah","firstSurname":"O'Kon","age":"25","email":"Frederick_Rau@hotmail.com","secondName":"Arvilla"}]},"meta":{"pageNumber":1,"_requestDateTime":"2023-09-26T16:07:05.989Z","moreRegisters":"eruoeuroeru","_applicationId":"121475f6-6989-4595-a746-9594d3182907","pageSize":10,"_messageId":"b23158e7-60db-4356-932d-5a0cfcec3590"}}
+---------------------------------------------------------
+feature: classpath:co/com/bancolombia/retrieveInformation/unitTest.feature
+scenarios:  2 | passed:  2 | failed:  0 | time: 2,5087
+---------------------------------------------------------
+
+01:05:16.206 [Test worker] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:co/com/bancolombia/retrieveInformation/unitTest.feature
+Karate version: 1.0.1
+======================================================
+elapsed:   5,15 | threads:    1 | thread time: 2,51 
+features:     1 | skipped:    0 | efficiency: 0,49
+scenarios:    2 | passed:     2 | failed: 0
+======================================================
+
+HTML report: (paste into browser to view) | Karate version: 1.0.1
+file:///C:/Users/giorman.rodriguez_pr/Desktop/Assesments-banco/client-central-information_1.0.0/build/karate-reports/karate-summary.html
+===================================================================
+
+]]></system-out>
+  <system-err><![CDATA[Mar 12, 2024 1:05:16 AM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File 'C:\Users\giorman.rodriguez_pr\Desktop\Assesments-banco\client-central-information_1.0.0\build\karate-reports\co.com.bancolombia.retrieveInformation.unitTest.json' contains 1 features
+]]></system-err>
+</testsuite>

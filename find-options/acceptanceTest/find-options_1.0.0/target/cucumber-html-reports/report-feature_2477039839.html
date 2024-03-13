@@ -1,0 +1,9024 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Feature: co/com/bancolombia/retrieveInformation/contractTest.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>SecurityAccessEntitlementRelationsManagement-v3_acceptanceTest</td>
+      <td>16 Nov 2023, 17:17</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">co/com/bancolombia/retrieveInformation/contractTest.feature</td>
+          <td      class="passed"    >240</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">240</td>
+
+          <td  class="passed"    >14</td>
+          <td >0</td>
+          <td class="total">14</td>
+
+          <td class="duration" data-value="14296628300">14.296</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">co/com/bancolombia/retrieveInformation/contractTest.feature</span>
+
+
+</div>
+
+        <div class="description indention">Consultar los grupos de productos asociados por cliente para Entitlement</div>
+
+        <div class="elements inner-level">
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.085</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>17:16:41.907 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.035</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.013</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.022</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.011</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">3.939</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Consulta exitosa</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.013</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'NEG'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">1.478</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>17:16:42.365 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: NEG
+1 &gt; message-id: 9a9476b8-7663-4ac9-a4cd-ba4e72dfcfe3
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 76
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;A9C64CA09C7DE469C8160F8E308BAD057&quot;}}}
+
+17:16:43.482 response time in milliseconds: 1112
+1 &lt; 200
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-Type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transform
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Global-Transaction-ID: b7006f94655694ca0000acf0
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1999;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:43 GMT
+{&quot;data&quot;:{&quot;identification&quot;:{&quot;number&quot;:&quot;180427043217&quot;,&quot;type&quot;:&quot;CE&quot;},&quot;identity&quot;:{&quot;stateAlias&quot;:&quot;ACTIVO&quot;,&quot;AID&quot;:&quot;A9C64CA09C7DE469C8160F8E308BAD057&quot;,&quot;CID&quot;:&quot;U64DE38E8206A43E3B10FB9ECF83C6BB8&quot;},&quot;relations&quot;:[{&quot;owner&quot;:{&quot;identification&quot;:{&quot;number&quot;:&quot;1427043321&quot;,&quot;type&quot;:&quot;CC&quot;,&quot;mdmKey&quot;:&quot;20035&quot;}},&quot;identifier&quot;:&quot;RELLD6BCVCM6CP3K8Q4&quot;,&quot;role&quot;:{&quot;identifier&quot;:&quot;ROLPCS3KSR27139EH11&quot;,&quot;name&quot;:&quot;Rol update 12123&quot;,&quot;status&quot;:&quot;Activo&quot;},&quot;status&quot;:&quot;Activo&quot;},{&quot;owner&quot;:{&quot;identification&quot;:{&quot;number&quot;:&quot;1427043321&quot;,&quot;type&quot;:&quot;CC&quot;,&quot;mdmKey&quot;:&quot;20035&quot;}},&quot;identifier&quot;:&quot;RELLD6BCVCM6CP3K8Q2&quot;,&quot;role&quot;:{&quot;identifier&quot;:&quot;ROLPCS3KSR27139EH11&quot;,&quot;name&quot;:&quot;Rol update 12123&quot;,&quot;status&quot;:&quot;Activo&quot;},&quot;status&quot;:&quot;Activo&quot;},{&quot;owner&quot;:{&quot;identification&quot;:{&quot;number&quot;:&quot;180427043217&quot;,&quot;type&quot;:&quot;CE&quot;,&quot;mdmKey&quot;:&quot;20035&quot;}},&quot;identifier&quot;:&quot;RELLD6BCVCM6CP3K8QY&quot;,&quot;role&quot;:{&quot;identifier&quot;:&quot;ROL0000000000000007&quot;,&quot;name&quot;:&quot;TITULAR&quot;,&quot;status&quot;:&quot;Activo&quot;},&quot;status&quot;:&quot;Activo&quot;},{&quot;owner&quot;:{&quot;identification&quot;:{&quot;number&quot;:&quot;1122334455&quot;,&quot;type&quot;:&quot;CC&quot;,&quot;mdmKey&quot;:&quot;000001&quot;}},&quot;identifier&quot;:&quot;RELDATACAPA00000001&quot;,&quot;role&quot;:{&quot;identifier&quot;:&quot;ROL0000000000000007&quot;,&quot;name&quot;:&quot;TITULAR&quot;,&quot;status&quot;:&quot;Activo&quot;},&quot;status&quot;:&quot;Activo&quot;},{&quot;owner&quot;:{&quot;identification&quot;:{&quot;number&quot;:&quot;1122334455&quot;,&quot;type&quot;:&quot;CC&quot;,&quot;mdmKey&quot;:&quot;000001&quot;}},&quot;identifier&quot;:&quot;RELDATACAPA00000002&quot;,&quot;role&quot;:{&quot;identifier&quot;:&quot;ROL0000000000000007&quot;,&quot;name&quot;:&quot;TITULAR&quot;,&quot;status&quot;:&quot;Activo&quot;},&quot;status&quot;:&quot;Activo&quot;},{&quot;owner&quot;:{&quot;identification&quot;:{&quot;number&quot;:&quot;1427043321&quot;,&quot;type&quot;:&quot;CC&quot;,&quot;mdmKey&quot;:&quot;20035&quot;}},&quot;identifier&quot;:&quot;RELLD6BCVCM6CP3K8Q1&quot;,&quot;role&quot;:{&quot;identifier&quot;:&quot;ROLUV9PQZTH0LJF32ZH&quot;,&quot;name&quot;:&quot;Mi contador JS&quot;,&quot;status&quot;:&quot;Activo&quot;},&quot;status&quot;:&quot;Inactivo&quot;}]},&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:42+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;9a9476b8-7663-4ac9-a4cd-ba4e72dfcfe3&quot;}}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelationsDetail', ValidatorTestUtils.POST, 200)</span>
+
+  <span class="lead-duration duration">2.350</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.069</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data == read('retrieveInformation200.json').data</span>
+
+  <span class="lead-duration duration">0.025</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.014</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-8">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>17:16:45.971 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.731</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-10">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">DADO que se desea validar el esquema del request CUANDO no cumple con las longitudes en el header channel ENTONCES se espera un status 400 por mensaje mal formado</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-10" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-11" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVPPPP'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.549</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>17:16:45.997 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SVPPPP
+1 &gt; message-id: d1a43f3d-9f90-48ba-9a4e-204c43dc9f33
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 76
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;A9C64CA09C7DE469C8160F8E308BAD057&quot;}}}
+
+17:16:46.536 response time in milliseconds: 536
+1 &lt; 400
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: d1a43f3d-9f90-48ba-9a4e-204c43dc9f33
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694ce0000ad40
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1999;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:46 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:46+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;d1a43f3d-9f90-48ba-9a4e-204c43dc9f33&quot;},&quot;title&quot;:&quot;Bad Request&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;SA400&quot;,&quot;detail&quot;:&quot;Longitud de channel invalida&quot;}],&quot;status&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 400)</span>
+
+  <span class="lead-duration duration">0.178</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Longitud de channel invalida'</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.007</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>17:16:46.740 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.795</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-16">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">DADO que se desea validar el esquema del request CUANDO no cumple con las longitudes en el header channel ENTONCES se espera un status 400 por mensaje mal formado</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-16" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-17">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-17" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = ''</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.608</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>17:16:46.755 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: 
+1 &gt; message-id: e1aa3626-57a1-44f8-bac4-616f0eb0b20f
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 76
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;A9C64CA09C7DE469C8160F8E308BAD057&quot;}}}
+
+17:16:47.358 response time in milliseconds: 602
+1 &lt; 400
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: e1aa3626-57a1-44f8-bac4-616f0eb0b20f
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694ce0000ad70
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1998;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:46 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:46+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;e1aa3626-57a1-44f8-bac4-616f0eb0b20f&quot;},&quot;title&quot;:&quot;Bad Request&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;SA400&quot;,&quot;detail&quot;:&quot;Variable channel indefinida&quot;}],&quot;status&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 400)</span>
+
+  <span class="lead-duration duration">0.180</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Variable channel indefinida'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.013</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-19">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-19" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-20">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-20" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details">
+        <pre>17:16:47.574 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.750</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-22">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">DADO que se desea validar el esquema del request CUANDO no cumple con las longitudes en el header message-id ENTONCES se espera un status 400 por mensaje mal formado</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-22" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-23">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-23" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.message-id = ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.539</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-24">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details">
+        <pre>17:16:47.596 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SVP
+1 &gt; message-id: 
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 76
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;A9C64CA09C7DE469C8160F8E308BAD057&quot;}}}
+
+17:16:48.127 response time in milliseconds: 530
+1 &lt; 400
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: 
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694cf0000ad90
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1999;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:47 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:47+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;&quot;},&quot;title&quot;:&quot;Bad Request&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;SA400&quot;,&quot;detail&quot;:&quot;Variable message-id indefinida&quot;}],&quot;status&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 400)</span>
+
+  <span class="lead-duration duration">0.206</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Variable message-id indefinida'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.024</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-25">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-25" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-26">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-26" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-27">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-27" class="collapse collapsable-details">
+        <pre>17:16:48.394 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.021</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.740</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-28">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">DADO que se desea validar el esquema del request CUANDO no cumple con las longitudes en el header message-id ENTONCES se espera un status 400 por mensaje mal formado</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-28" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-29">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-29" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.message-id = '41ea2c08-422f-497a-8abe-9de3064539cb-8abe-9de306453'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.604</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-30">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-30" class="collapse collapsable-details">
+        <pre>17:16:48.489 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SVP
+1 &gt; message-id: 41ea2c08-422f-497a-8abe-9de3064539cb-8abe-9de306453
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 76
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;A9C64CA09C7DE469C8160F8E308BAD057&quot;}}}
+
+17:16:49.027 response time in milliseconds: 537
+1 &lt; 400
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: 41ea2c08-422f-497a-8abe-9de3064539cb-8abe-9de306453
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694d00000adc0
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1999;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:48 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:48+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;41ea2c08-422f-497a-8abe-9de3064539cb-8abe-9de306453&quot;},&quot;title&quot;:&quot;Bad Request&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;SA400&quot;,&quot;detail&quot;:&quot;Longitud de message-id invalida&quot;}],&quot;status&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 400)</span>
+
+  <span class="lead-duration duration">0.129</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Longitud de message-id invalida'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.006</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-31">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-31" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-32">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-32" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-33">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details">
+        <pre>17:16:49.186 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.668</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-34">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">DADO que se desea validar el esquema del request CUANDO el campo identity.alias tiene un tipo de dato incorrecto ENTONCES se espera un status 400 por parametro string o numerico invalido</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-34" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-35">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-35" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set requestRetrieveInformation.data.identity.alias = '***'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.563</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-36">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-36" class="collapse collapsable-details">
+        <pre>17:16:49.200 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SVP
+1 &gt; message-id: 60ef23f4-916e-495f-bd54-2427be4f3f18
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 79
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;***&quot;,&quot;AID&quot;:&quot;A9C64CA09C7DE469C8160F8E308BAD057&quot;}}}
+
+17:16:49.756 response time in milliseconds: 555
+1 &lt; 400
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: 60ef23f4-916e-495f-bd54-2427be4f3f18
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694d10000adf0
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1999;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:49 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:49+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;60ef23f4-916e-495f-bd54-2427be4f3f18&quot;},&quot;title&quot;:&quot;Bad Request&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;SA400&quot;,&quot;detail&quot;:&quot;Parametro String alias invalido&quot;}],&quot;status&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 400)</span>
+
+  <span class="lead-duration duration">0.098</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Parametro String alias invalido'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].code == 'SA400'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.008</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-37">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-37" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-38">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-38" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-39">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-39" class="collapse collapsable-details">
+        <pre>17:16:49.912 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.725</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-40">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">DADO que se desea validar el esquema del request CUANDO el campo identity.AID tiene un tipo de dato incorrecto ENTONCES se espera un status 400 por parametro string o numerico invalido</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-40" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-41">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-41" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set requestRetrieveInformation.data.identity.AID = '+++'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.615</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-42">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-42" class="collapse collapsable-details">
+        <pre>17:16:49.925 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SVP
+1 &gt; message-id: 50b1561a-b2dc-4ffe-afaf-867640c24ac6
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 46
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;+++&quot;}}}
+
+17:16:50.535 response time in milliseconds: 609
+1 &lt; 400
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: 50b1561a-b2dc-4ffe-afaf-867640c24ac6
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694d20000ae20
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1999;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:50 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:50+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;50b1561a-b2dc-4ffe-afaf-867640c24ac6&quot;},&quot;title&quot;:&quot;Bad Request&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;SA400&quot;,&quot;detail&quot;:&quot;Parametro String AID invalido&quot;}],&quot;status&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 400)</span>
+
+  <span class="lead-duration duration">0.102</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Parametro String AID invalido'</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].code == 'SA400'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.004</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-43">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-43" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-44">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-44" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-45">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-45" class="collapse collapsable-details">
+        <pre>17:16:50.673 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.599</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-46">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">DADO que se desea validar el esquema del request CUANDO el campo identity.alias tiene una longitud  incorrecta ENTONCES se espera un status 400 por parametro string o numerico invalido</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-46" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-47">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-47" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set requestRetrieveInformation.data.identity.alias = 'asdasdassdsadiuwhwqjkdskjasdkasbdjkqwhdjqbwdkjqnwdq'</span>
+
+  <span class="lead-duration duration">0.009</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.520</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-48">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-48" class="collapse collapsable-details">
+        <pre>17:16:50.694 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SVP
+1 &gt; message-id: af2a8d71-3441-42bb-a2db-c996fe1a6eb6
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 127
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;asdasdassdsadiuwhwqjkdskjasdkasbdjkqwhdjqbwdkjqnwdq&quot;,&quot;AID&quot;:&quot;A9C64CA09C7DE469C8160F8E308BAD057&quot;}}}
+
+17:16:51.208 response time in milliseconds: 513
+1 &lt; 400
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: af2a8d71-3441-42bb-a2db-c996fe1a6eb6
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694d20000ae50
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1998;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:50 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:50+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;af2a8d71-3441-42bb-a2db-c996fe1a6eb6&quot;},&quot;title&quot;:&quot;Bad Request&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;SA400&quot;,&quot;detail&quot;:&quot;Longitud de alias invalida&quot;}],&quot;status&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 400)</span>
+
+  <span class="lead-duration duration">0.065</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Longitud de alias invalida'</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].code == 'SA400'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.023</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-49">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-49" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-50">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-50" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-51">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-51" class="collapse collapsable-details">
+        <pre>17:16:51.305 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.017</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.615</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-52">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">DADO que se desea validar el esquema del request CUANDO el campo identity.AID tiene una longitud  incorrecta ENTONCES se espera un status 400 por parametro string o numerico invalido</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-52" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-53">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-53" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">set requestRetrieveInformation.data.identity.AID = 'qeqweasdasdqwdasdwqdqwdqwdqwdqwdqwqwsdwqd'</span>
+
+  <span class="lead-duration duration">0.007</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.523</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-54">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-54" class="collapse collapsable-details">
+        <pre>17:16:51.365 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SVP
+1 &gt; message-id: 7a6b8ea2-4722-413e-91e7-54daf80e789d
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 84
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;qeqweasdasdqwdasdwqdqwdqwdqwdqwdqwqwsdwqd&quot;}}}
+
+17:16:51.861 response time in milliseconds: 495
+1 &lt; 400
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: 7a6b8ea2-4722-413e-91e7-54daf80e789d
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694d30000ae70
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1999;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:51 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:51+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;7a6b8ea2-4722-413e-91e7-54daf80e789d&quot;},&quot;title&quot;:&quot;Bad Request&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;SA400&quot;,&quot;detail&quot;:&quot;Longitud de AID invalida&quot;}],&quot;status&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 400)</span>
+
+  <span class="lead-duration duration">0.080</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Longitud de AID invalida'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].code == 'SA400'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.086</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-55">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-55" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-56">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-56" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-57">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-57" class="collapse collapsable-details">
+        <pre>17:16:51.967 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.082</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.707</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-58">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Consulta fallida cuando no se envia identity en el body</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-58" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-59">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-59" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">remove requestRetrieveInformation.data.identity</span>
+
+  <span class="lead-duration duration">0.035</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.611</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-60">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-60" class="collapse collapsable-details">
+        <pre>17:16:52.095 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SVP
+1 &gt; message-id: 46106a20-2986-4f8f-9e2d-8242cdd53847
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 11
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{}}
+
+17:16:52.703 response time in milliseconds: 607
+1 &lt; 400
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: 46106a20-2986-4f8f-9e2d-8242cdd53847
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694d40000aea0
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1999;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:52 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:52+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;46106a20-2986-4f8f-9e2d-8242cdd53847&quot;},&quot;title&quot;:&quot;Bad Request&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;SA400&quot;,&quot;detail&quot;:&quot;Objecto identity requerido&quot;}],&quot;status&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelationsDetail', ValidatorTestUtils.POST, 400)</span>
+
+  <span class="lead-duration duration">0.056</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Objecto identity requerido'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.004</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-61">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-61" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-62">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-62" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-63">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-63" class="collapse collapsable-details">
+        <pre>17:16:52.787 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.903</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-64">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Identidad no existe</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-64" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-65">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-65" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set requestRetrieveInformation.data.identity.alias   = ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set requestRetrieveInformation.data.identity.AID = 'A14B95A1FF68D415DAE998F6BACA3C832'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.575</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-66">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-66" class="collapse collapsable-details">
+        <pre>17:16:52.797 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SVP
+1 &gt; message-id: fa29e33b-6cfd-46db-9bfa-59d4b1279d35
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 76
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;A14B95A1FF68D415DAE998F6BACA3C832&quot;}}}
+
+17:16:53.368 response time in milliseconds: 570
+1 &lt; 409
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: fa29e33b-6cfd-46db-9bfa-59d4b1279d35
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694d40000aed0
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1998;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:52 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:52+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;fa29e33b-6cfd-46db-9bfa-59d4b1279d35&quot;},&quot;title&quot;:&quot;Conflict&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;BPER409-51&quot;,&quot;detail&quot;:&quot;Registro no encontrado.&quot;}],&quot;status&quot;:409}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 409</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 409)</span>
+
+  <span class="lead-duration duration">0.317</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Registro no encontrado.'</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].code == 'BPER409-51'</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.005</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-67">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-67" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-68">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-68" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-69">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-69" class="collapse collapsable-details">
+        <pre>17:16:53.739 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">1.182</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-70">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">No hay relaci&oacute;n</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-70" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-71">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-71" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.032</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SUID'</span>
+
+  <span class="lead-duration duration">0.037</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set requestRetrieveInformation.data.identity.alias   = ''</span>
+
+  <span class="lead-duration duration">0.012</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set requestRetrieveInformation.data.identity.AID = 'A14B95A1FF68D415DAE998F6BACA3C832'</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.628</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-72">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-72" class="collapse collapsable-details">
+        <pre>17:16:53.858 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SUID
+1 &gt; message-id: d148ba4a-b5af-4ad3-87ba-61698c28321d
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 76
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;A14B95A1FF68D415DAE998F6BACA3C832&quot;}}}
+
+17:16:54.460 response time in milliseconds: 600
+1 &lt; 409
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: d148ba4a-b5af-4ad3-87ba-61698c28321d
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694d50000af00
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1999;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:54 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:53+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;d148ba4a-b5af-4ad3-87ba-61698c28321d&quot;},&quot;title&quot;:&quot;Conflict&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;BPER409-52&quot;,&quot;detail&quot;:&quot;No se encuentran registros de relacionamiento.&quot;}],&quot;status&quot;:409}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 409</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 409)</span>
+
+  <span class="lead-duration duration">0.337</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.127</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'No se encuentran registros de relacionamiento.'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].code == 'BPER409-52'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.006</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-73">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-73" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-74">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-74" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-75">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-75" class="collapse collapsable-details">
+        <pre>17:16:54.945 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.847</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-76">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Faltan par&aacute;metros</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-76" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-77">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-77" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SUID'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set requestRetrieveInformation.data.identity.alias   = ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set requestRetrieveInformation.data.identity.AID = ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.647</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-78">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-78" class="collapse collapsable-details">
+        <pre>17:16:54.960 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: SUID
+1 &gt; message-id: 088d4f45-6f45-47a3-a3c2-ff830f15a516
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 43
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;&quot;}}}
+
+17:16:55.603 response time in milliseconds: 641
+1 &lt; 400
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: 088d4f45-6f45-47a3-a3c2-ff830f15a516
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694d70000af30
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1999;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:55 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:55+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;088d4f45-6f45-47a3-a3c2-ff830f15a516&quot;},&quot;title&quot;:&quot;Bad Request&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;BPER400-03&quot;,&quot;detail&quot;:&quot;Faltan par&aacute;metros obligatorios.&quot;}],&quot;status&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 400</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 400)</span>
+
+  <span class="lead-duration duration">0.192</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'Faltan par&aacute;metros obligatorios.'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].code == 'BPER400-03'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.009</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-79">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-79" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-80">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-80" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def oasUrl = oasUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-81">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-81" class="collapse collapsable-details">
+        <pre>17:16:55.817 over-writing existing variable 'oasUrl' with new value: oasUrl
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure headers = headers</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'SVP'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def ValidatorTestUtils = Java.type('co.com.unit.utils.ValidatorTestUtils')</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">ValidatorTestUtils.setContentType(headers.Accept);</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def requestRetrieveInformation = read('retrieveInformation.json')</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_3442184451.html">@contractTest</a>
+</div>
+
+
+  <span class="lead-duration duration">0.785</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-82">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Consumidor no se encuentra registrado</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-82" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-83">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-83" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'retrieveRelations'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestRetrieveInformation</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set headers.channel = 'S'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set requestRetrieveInformation.data.identity.alias   = ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set requestRetrieveInformation.data.identity.AID = ''</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.665</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-84">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-84" class="collapse collapsable-details">
+        <pre>17:16:55.839 request:
+1 &gt; POST https://gw-autorizaciones-dev.apps.ambientesbc.lab/private-bancolombia/development/v3/sales-service/customer-management/security-access-entitlement/retrieveRelations
+1 &gt; Client-Id: 72cb198f3d81d0788a02c56287b3a3f7
+1 &gt; client-secret: 08d766f6440ffde1fdc504556dbce5e2
+1 &gt; accept: application/vnd.bancolombia.v4+json
+1 &gt; channel: S
+1 &gt; message-id: 92e29304-1b75-4e66-89f3-4fcc1efc964a
+1 &gt; aid-creator: 
+1 &gt; Content-Type: application/vnd.bancolombia.v4+json; charset=UTF-8
+1 &gt; Content-Length: 43
+1 &gt; Host: gw-autorizaciones-dev.apps.ambientesbc.lab
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;data&quot;:{&quot;identity&quot;:{&quot;alias&quot;:&quot;&quot;,&quot;AID&quot;:&quot;&quot;}}}
+
+17:16:56.497 response time in milliseconds: 657
+1 &lt; 409
+1 &lt; Connection: Keep-Alive
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Content-type: application/vnd.bancolombia.v4+json; charset=utf-8
+1 &lt; API-Version: 3.1.0
+1 &lt; Message-id: 92e29304-1b75-4e66-89f3-4fcc1efc964a
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Security-Policy: default-src 'self' *.bancolombia.com
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Cache-Control: private, no-cache, no-store, max-age=0, no-transfor
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Global-Transaction-ID: b7006f94655694d70000af60
+1 &lt; X-RateLimit-Limit: name=default,2000;
+1 &lt; X-RateLimit-Remaining: name=default,1998;
+1 &lt; Date: Thu, 16 Nov 2023 22:16:55 GMT
+{&quot;meta&quot;:{&quot;_requestDateTime&quot;:&quot;2023-11-16T22:16:55+00:00&quot;,&quot;_applicationId&quot;:&quot;72cb198f3d81d0788a02c56287b3a3f7&quot;,&quot;_messageId&quot;:&quot;92e29304-1b75-4e66-89f3-4fcc1efc964a&quot;},&quot;title&quot;:&quot;Conflict&quot;,&quot;errors&quot;:[{&quot;code&quot;:&quot;BPER409-36&quot;,&quot;detail&quot;:&quot;El consumidor no se encuentra registrado.&quot;}],&quot;status&quot;:409}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 409</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">string strResponse = response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def report = ValidatorTestUtils.validateResponseSchema(oasUrl, strResponse, 'retrieveRelations', ValidatorTestUtils.POST, 409)</span>
+
+  <span class="lead-duration duration">0.102</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">if (report.hasErrors()) karate.fail(report.getMessages() + ' - '+ strResponse)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].detail == 'El consumidor no se encuentra registrado.'</span>
+
+  <span class="lead-duration duration">0.011</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.errors[0].code == 'BPER409-36'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
