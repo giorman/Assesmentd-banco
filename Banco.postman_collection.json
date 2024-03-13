@@ -1,0 +1,1514 @@
+{
+	"info": {
+		"_postman_id": "54d79669-1bb9-4d05-8b40-6903ad90468e",
+		"name": "Banco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24113743",
+		"_collection_link": "https://grey-flare-393152.postman.co/workspace/Bancolombia~f85538bf-f4e1-44ce-ae3e-6a9fb23e1169/collection/24113743-54d79669-1bb9-4d05-8b40-6903ad90468e?action=share&source=collection_link&creator=24113743"
+	},
+	"item": [
+		{
+			"name": "Client Central",
+			"item": [
+				{
+					"name": "Information",
+					"item": [
+						{
+							"name": "retrieve",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"identification\": {\r\n            \"type\": \"CC\",\r\n            \"number\": \"419874561698\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/client-central-information/retrieve",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"client-central-information",
+										"retrieve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieveList",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"filters\": {\r\n            \"country\": \"Colombia\",\r\n            \"income\": {\r\n                \"min\": \"100000\",\r\n                \"max\": \"2000000\"\r\n            },\r\n            \"age\": {\r\n                \"min\": \"25\",\r\n                \"max\": \"30\"\r\n            }\r\n        }\r\n    },\r\n    \"pagination\": {\r\n        \"pageSize\": 10,\r\n        \"pageNumber\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/client-central-information/retrieveList",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"client-central-information",
+										"retrieveList"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Health",
+							"request": {
+								"method": "HEAD",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/client-central-information/health",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"client-central-information",
+										"health"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Management",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"firstName\": \"Giorman\",\r\n        \"secondName\": \"Stiven\",\r\n        \"firstSurname\": \"Rodriguez\",\r\n        \"secondSurname\": \"Muñoz\",\r\n        \"identification\": {\r\n            \"type\": \"CC\",\r\n            \"number\": \"419874561698\"\r\n        },\r\n        \"income\": \"589589\",\r\n        \"birthdate\": \"28/05/1996\",\r\n        \"phonenumber\": \"3152045416\",\r\n        \"email\": \"giorman@gmail.com\",\r\n        \"address\": \"Calle 5 # 58-15\",\r\n        \"city\": \"Buga\",\r\n        \"department\": \"Valle del Cauca\",\r\n        \"country\": \"Colombia\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/client-central-management/create",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"client-central-management",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modify",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"uic\": \"fds784ffgs6484f\",\r\n        \"income\": \"589589\",\r\n        \"phonenumber\": \"3152045416\",\r\n        \"email\": \"giorman@gmail.com\",\r\n        \"address\": \"Calle 5 # 58-15\",\r\n        \"city\": \"Buga\",\r\n        \"department\": \"Valle del Cauca\",\r\n        \"country\": \"Colombia\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/client-central-management/modify",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"client-central-management",
+										"modify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Health",
+							"request": {
+								"method": "HEAD",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/client-central-management/health",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"client-central-management",
+										"health"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Information",
+					"item": [
+						{
+							"name": "retrieve",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"code\": \"56478\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/product-information/retrieve",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"product-information",
+										"retrieve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieveList",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"filters\": {\r\n            \"age\": \"18\",\r\n            \"nationality\": \"Colombia\",\r\n            \"income\": \"589589\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/product-information/retrieveList",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"product-information",
+										"retrieveList"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Health",
+							"request": {
+								"method": "HEAD",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/product-information/health",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"product-information",
+										"health"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Management",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"code\": \"56478\",\r\n        \"title\": \"Tarjeta Debito\",\r\n        \"description\": \"Tarjeta Debito de la Franquicia mastercard\",\r\n        \"conditions\": {\r\n            \"age\": \"18\",\r\n            \"nationality\": \"Colombia\",\r\n            \"income\": \"500000\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/product-management/create",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"product-management",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modify",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"code\": \"56478\",\r\n        \"title\": \"Tarjeta Debito\",\r\n        \"description\": \"Tarjeta Debito de la Franquicia mastercard\",\r\n        \"conditions\": {\r\n            \"age\": \"18\",\r\n            \"nationality\": \"Colombia\",\r\n            \"income\": \"589589\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/product-management/modify",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"product-management",
+										"modify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"code\": \"56478\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/product-management/delete",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"product-management",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Health",
+							"request": {
+								"method": "HEAD",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/product-management/health",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"product-management",
+										"health"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Central",
+			"item": [
+				{
+					"name": "Management",
+					"item": [
+						{
+							"name": "access",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"username\": \"SGVsbG8gV29ybGQh\",\r\n        \"password\": \"1fd79684adf\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/user-central-management/access",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"user-central-management",
+										"access"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "validate",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"identification\": {\r\n      \"uic\": \"fds784ffgs6484f\"\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/user-central-management/validate",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"user-central-management",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"identification\": {\r\n            \"uic\": \"fds784ffgs6484f\"\r\n        },\r\n        \"username\": \"SGVsbG8gV29ybGQh\",\r\n        \"password\": \"1fd79684adf\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/user-central-management/create",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"user-central-management",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modify",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"identification\": {\r\n            \"uic\": \"fds784ffgs6484f\"\r\n        },\r\n        \"username\": \"SGVsbG8gV29ybGQh\",\r\n        \"password\": \"1fd79684adf\",\r\n        \"newPassword\": \"1fd79684adf\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/user-central-management/modify",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"user-central-management",
+										"modify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"identification\": {\r\n            \"uic\": \"fds784ffgs6484f\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/user-central-management/delete",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"user-central-management",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Health",
+							"request": {
+								"method": "HEAD",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/user-central-management/health",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"user-central-management",
+										"health"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Find Options",
+			"item": [
+				{
+					"name": "Information",
+					"item": [
+						{
+							"name": "retrieve",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"identification\": {\r\n            \"type\": \"CC\",\r\n            \"number\": \"419874561698\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/find-options-information/retrieve",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"find-options-information",
+										"retrieve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieveList",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									},
+									{
+										"key": "message-id",
+										"value": "{{$guid}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"filters\": {\r\n            \"country\": \"Colombia\",\r\n            \"income\": {\r\n                \"min\": \"100000\",\r\n                \"max\": \"2000000\"\r\n            },\r\n            \"age\": {\r\n                \"min\": \"25\",\r\n                \"max\": \"30\"\r\n            }\r\n        }\r\n    },\r\n    \"pagination\": {\r\n        \"pageSize\": 10,\r\n        \"pageNumber\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/find-options-information/retrieveList",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"find-options-information",
+										"retrieveList"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Health",
+							"request": {
+								"method": "HEAD",
+								"header": [
+									{
+										"key": "Client-Id",
+										"value": "81b0af8081335b326a4040abcfe16e86",
+										"type": "text"
+									},
+									{
+										"key": "Client-Secret",
+										"value": "c4c99959ccfd61e30e11f15ac75e4aff",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://api.us-east-a.apiconnect.ibmappdomain.cloud/apiconect/sandbox/v1/service/find-options-information/health",
+									"protocol": "https",
+									"host": [
+										"api",
+										"us-east-a",
+										"apiconnect",
+										"ibmappdomain",
+										"cloud"
+									],
+									"path": [
+										"apiconect",
+										"sandbox",
+										"v1",
+										"service",
+										"find-options-information",
+										"health"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Back",
+			"item": [
+				{
+					"name": "clients",
+					"item": [
+						{
+							"name": "retrieve",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65ed273e0ddee626c9b12e63.mockapi.io/services/client/v1/retrieve",
+									"protocol": "https",
+									"host": [
+										"65ed273e0ddee626c9b12e63",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"client",
+										"v1",
+										"retrieve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieveList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65ed273e0ddee626c9b12e63.mockapi.io/services/client/v1/retrieveList",
+									"protocol": "https",
+									"host": [
+										"65ed273e0ddee626c9b12e63",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"client",
+										"v1",
+										"retrieveList"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://65ed273e0ddee626c9b12e63.mockapi.io/services/client/v1/create",
+									"protocol": "https",
+									"host": [
+										"65ed273e0ddee626c9b12e63",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"client",
+										"v1",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modify",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65ed273e0ddee626c9b12e63.mockapi.io/services/client/v1/modify",
+									"protocol": "https",
+									"host": [
+										"65ed273e0ddee626c9b12e63",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"client",
+										"v1",
+										"modify"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "retrieve",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65ede4bf08706c584d9ad3b4.mockapi.io/services/product/v1/retrieve",
+									"protocol": "https",
+									"host": [
+										"65ede4bf08706c584d9ad3b4",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"product",
+										"v1",
+										"retrieve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieveList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65ede4bf08706c584d9ad3b4.mockapi.io/services/product/v1/retrieveList",
+									"protocol": "https",
+									"host": [
+										"65ede4bf08706c584d9ad3b4",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"product",
+										"v1",
+										"retrieveList"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://65ede4bf08706c584d9ad3b4.mockapi.io/services/product/v1/create",
+									"protocol": "https",
+									"host": [
+										"65ede4bf08706c584d9ad3b4",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"product",
+										"v1",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modify",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65ede4bf08706c584d9ad3b4.mockapi.io/services/product/v1/modify",
+									"protocol": "https",
+									"host": [
+										"65ede4bf08706c584d9ad3b4",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"product",
+										"v1",
+										"modify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65ede4bf08706c584d9ad3b4.mockapi.io/services/product/v1/delete",
+									"protocol": "https",
+									"host": [
+										"65ede4bf08706c584d9ad3b4",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"product",
+										"v1",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "validate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65efaaa5ead08fa78a50bc3f.mockapi.io/services/user/v1/validate",
+									"protocol": "https",
+									"host": [
+										"65efaaa5ead08fa78a50bc3f",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"user",
+										"v1",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65efaaa5ead08fa78a50bc3f.mockapi.io/services/user/v1/access",
+									"protocol": "https",
+									"host": [
+										"65efaaa5ead08fa78a50bc3f",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"user",
+										"v1",
+										"access"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://65efaaa5ead08fa78a50bc3f.mockapi.io/services/user/v1/create",
+									"protocol": "https",
+									"host": [
+										"65efaaa5ead08fa78a50bc3f",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"user",
+										"v1",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "modify",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65efaaa5ead08fa78a50bc3f.mockapi.io/services/user/v1/modify",
+									"protocol": "https",
+									"host": [
+										"65efaaa5ead08fa78a50bc3f",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"user",
+										"v1",
+										"modify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65efaaa5ead08fa78a50bc3f.mockapi.io/services/user/v1/delete",
+									"protocol": "https",
+									"host": [
+										"65efaaa5ead08fa78a50bc3f",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"user",
+										"v1",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "FindOptions",
+					"item": [
+						{
+							"name": "retrieve",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65ee01ba08706c584d9aff91.mockapi.io/services/find-options/v1/retrieve",
+									"protocol": "https",
+									"host": [
+										"65ee01ba08706c584d9aff91",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"find-options",
+										"v1",
+										"retrieve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrieveList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://65ede4bf08706c584d9ad3b4.mockapi.io/services/product/v1/retrieveList",
+									"protocol": "https",
+									"host": [
+										"65ede4bf08706c584d9ad3b4",
+										"mockapi",
+										"io"
+									],
+									"path": [
+										"services",
+										"product",
+										"v1",
+										"retrieveList"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

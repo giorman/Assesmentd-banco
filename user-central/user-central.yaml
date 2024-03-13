@@ -1,0 +1,76 @@
+info:
+  name: user-central
+  title: User Central
+  version: 1.0.0
+  description: >-
+    Este  producto ofrece una solución integral para la gestión y validación de
+    usuarios. Con esta capacidad se puede controlar de manera efectiva el acceso
+    y las credenciales de los usuarios, garantizando la seguridad y la
+    integridad de los sistemas. Desde la creación hasta la autenticación,
+    nuestro producto proporciona herramientas poderosas para administrar y
+    verificar la identidad de los usuarios, asegurando un entorno digital
+    confiable y protegido.
+  contact:
+    name: Giorman API Portal
+    email: soporteapisinternas@giorman.com.co
+  summary: ''
+gateways:
+  - datapower-api-gateway
+plans:
+  default:
+    title: Default Plan
+    description: Default Plan
+    approval: true
+    rate-limits:
+      default:
+        value: 100/hour
+    apis:
+      user-central-management:
+        operations:
+          - path: /access
+            operation: post
+            rate-limits:
+              default:
+                hard-limit: true
+                value: 100/1second
+          - path: /validate
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /create
+            operation: post
+            rate-limits:
+              default:
+                hard-limit: true
+                value: 100/1second
+          - path: /modify
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /delete
+            operation: post
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 100/1second
+          - path: /health
+            operation: head
+            rate-limits:
+              rate-limit-1:
+                hard-limit: true
+                value: 1/1second
+apis:
+  user-central-management:
+    name: user-central-management:1.0.0
+visibility:
+  subscribe:
+    enabled: true
+    type: authenticated
+  view:
+    enabled: true
+    type: public
+product: 1.0.0

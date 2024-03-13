@@ -1,0 +1,2110 @@
+swagger: '2.0'
+info:
+  x-ibm-name: security-access-entitlement-relations-information
+  title: Security Access Entitlement Relations - Information
+  version: 3.1.0
+  description: >-
+    Esta API permite la consulta de la relación que tiene un cliente de con las
+    siguientes características: Si está actuando bajo nombre propio, si es una
+    persona natural, si es una persona jurídica. Validando así las delegaciones
+    que tenga un titular a un usuario delegado.  De tal forma que permite
+    decidir si la persona, tiene permiso para acceder a productos propios o
+    delegados por terceros, bajo un nivel de privilegios asignados a un rol.
+host: $(catalog.host)
+basePath: /v3/sales-service/customer-management/security-access-entitlement
+tags:
+  - name: retrieveRelations
+    description: Esta operación permite consultar las relaciones de un usuario.
+  - name: retrieveRelationsDetail
+    description: >-
+      Esta operación permite consultar el detalle de una relación entre de un
+      titular y un delegado.
+  - name: Monitoring
+    description: Esta capacidad permite realizar el monitoreo.
+paths:
+  /security-access-entitlement-relations-information/health:
+    head:
+      summary: Operación que permite realizar el monitoreo.
+      description: Esta capacidad permite realizar el monitoreo.
+      operationId: health
+      responses:
+        '200':
+          description: Respuesta exitosa.
+          x-ibm-languages:
+            description:
+              en: Successful response.
+      security:
+        - Client Id: []
+          Client Secret: []
+      tags:
+        - Monitoring
+  /retrieveRelations:
+    post:
+      summary: >-
+        La operación permite consultar la información de identidad y las
+        relaciones de un usuario.
+      description: '### Clasificación de la información: Interna'
+      parameters:
+        - name: message-Id
+          in: header
+          required: true
+          type: string
+          description: >-
+            Identificador del mensaje o de correlación y se usa para
+            trazabilidad. Este identificador permite identificar los logs de los
+            llamados a las APIs en los repositorios de logs, además, permite
+            emparejar la solicitud que se realiza a la API con su respuesta. Se
+            recomienda enviar un UUID para este valor. Ejemplo:
+            c4e6bd04-5149-11e7-b114-b2f933d5fe66.
+        - name: channel
+          type: string
+          required: true
+          in: header
+          description: Acrónimo con el que se identifica el consumidor en el porveedor
+        - name: requestBody
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/post_retrieveRelations'
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          description: >-
+            Representa el formato de mensajería que se espera en la respuesta.
+            Ejemplo: application/vnd.bancolombia.v4+json
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/post_responseretrieveRelations'
+          description: Respuesta exitosa.
+          x-ibm-languages:
+            description:
+              en: Successfull response.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '400':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Error en la solicitud.
+          x-ibm-languages:
+            description:
+              en: Error in the request.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '401':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Credenciales incorrectas.
+          x-ibm-languages:
+            description:
+              en: Incorrect credentials.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '409':
+          schema:
+            $ref: '#/definitions/failure'
+          description: >-
+            El estado del recurso presenta conflictos con los datos de la
+            solicitud.
+          x-ibm-languages:
+            description:
+              en: Resource state has conflicts with data of the request.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '500':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Error interno del servidor.
+          x-ibm-languages:
+            description:
+              en: Internal server error.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '502':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Error en la respuesta del proveedor del servicio.
+          x-ibm-languages:
+            description:
+              en: Error in the service provider response.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '503':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Servicio no disponible.
+          x-ibm-languages:
+            description:
+              en: Service unavailable.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '504':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Tiempo de respuesta del proveedor del servicio excedido.
+          x-ibm-languages:
+            description:
+              en: Service provider response time exceeded.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+      security:
+        - Client Secret: []
+          Client Id: []
+      operationId: POST_retrieveRelations
+      tags:
+        - retrieveRelations
+  /retrieveRelationsDetail:
+    post:
+      summary: >-
+        La operación permite consultar la información de identidad y las
+        relaciones de un usuario.
+      description: '### Clasificación de la información: Interna'
+      parameters:
+        - name: message-Id
+          in: header
+          required: true
+          type: string
+          description: >-
+            Identificador del mensaje o de correlación y se usa para
+            trazabilidad. Este identificador permite identificar los logs de los
+            llamados a las APIs en los repositorios de logs, además, permite
+            emparejar la solicitud que se realiza a la API con su respuesta. Se
+            recomienda enviar un UUID para este valor. Ejemplo:
+            c4e6bd04-5149-11e7-b114-b2f933d5fe66.
+        - name: channel
+          type: string
+          required: true
+          in: header
+          description: Acrónimo con el que se identifica el consumidor en el porveedor
+        - name: aid-creator
+          in: header
+          required: false
+          type: string
+          description: >-
+            Usuario que está ejecutando la acción. Se solicita cuando el channel
+            del header y el channel del requets son diferentes.
+        - name: requestBody
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/post_retrieveRelationsDetail'
+        - name: Accept
+          in: header
+          required: false
+          type: string
+          description: >-
+            Representa el formato de mensajería que se espera en la respuesta.
+            Ejemplo: application/vnd.bancolombia.v4+json
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/post_responseretrieveRelationsDetail'
+          description: Respuesta exitosa.
+          x-ibm-languages:
+            description:
+              en: Successfull response.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '400':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Error en la solicitud.
+          x-ibm-languages:
+            description:
+              en: Error in the request.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '401':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Credenciales incorrectas.
+          x-ibm-languages:
+            description:
+              en: Incorrect credentials.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls..
+        '409':
+          schema:
+            $ref: '#/definitions/failure'
+          description: >-
+            El estado del recurso presenta conflictos con los datos de la
+            solicitud.
+          x-ibm-languages:
+            description:
+              en: Resource state has conflicts with data of the request.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '500':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Error interno del servidor.
+          x-ibm-languages:
+            description:
+              en: Internal server error.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '502':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Error en la respuesta del proveedor del servicio.
+          x-ibm-languages:
+            description:
+              en: Error in the service provider response.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '503':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Servicio no disponible.
+          x-ibm-languages:
+            description:
+              en: Service unavailable.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+        '504':
+          schema:
+            $ref: '#/definitions/failure'
+          description: Tiempo de respuesta del proveedor del servicio excedido.
+          x-ibm-languages:
+            description:
+              en: Service provider response time exceeded.
+          headers:
+            Content-Type:
+              type: string
+              description: >-
+                Formato de mensajería de la API. Ejemplo:
+                application/vnd.bancolombia.v4+json.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    API message format. Example:
+                    application/vnd.bancolombia.v4+json.
+            API-Version:
+              type: string
+              description: 'Version de la API. Ejemplo: 1.0.0.'
+              x-ibm-languages:
+                description:
+                  en: 'API Version. Example: 1.0.0.'
+            RateLimit-Limit:
+              type: number
+              description: Límite de solicitudes por intervalo de tiempo
+              x-ibm-languages:
+                description:
+                  en: Resquest limit per time interval.
+            Message-Id:
+              type: string
+              description: >-
+                Identificador del mensaje o de correlación usado para la
+                trazabilidad de los llamados a las APIs.
+              x-ibm-languages:
+                description:
+                  en: >-
+                    Message identifier or correlation identifier used for the
+                    traceability of the API calls.
+      security:
+        - Client Secret: []
+          Client Id: []
+      operationId: POST_retrieveRelationsDetail
+      tags:
+        - retrieveRelationsDetail
+definitions:
+  post_retrieveRelations:
+    type: object
+    required:
+      - data
+    properties:
+      data:
+        type: object
+        required:
+          - identity
+          - alias
+        properties:
+          identity:
+            type: object
+            description: Bloque que contiene información de la identidad de un usuario
+            properties:
+              alias:
+                type: string
+                maxLength: 33
+                description: >-
+                  Corresponde al nickname de una persona, nombre de usuario
+                  creado por canal.
+                example: jucamio
+              AID:
+                type: string
+                maxLength: 33
+                description: Identificador Único de Alias.
+                example: AID32189JH329J23J9J892
+  post_responseretrieveRelations:
+    type: object
+    required:
+      - meta
+      - data
+    properties:
+      meta:
+        $ref: '#/definitions/meta'
+      data:
+        required:
+          - identity
+          - identification
+          - relations
+        type: object
+        properties:
+          identity:
+            $ref: '#/definitions/identityRelations'
+          identification:
+            $ref: '#/definitions/identificationRelations'
+          relations:
+            $ref: '#/definitions/Relations'
+  post_retrieveRelationsDetail:
+    type: object
+    required:
+      - data
+    properties:
+      data:
+        type: object
+        required:
+          - channel
+          - delegate
+          - owner
+        properties:
+          channel:
+            required:
+              - code
+            type: object
+            description: >-
+              Bloque de información que contiene el detalle de un canal o
+              consumidor
+            properties:
+              code:
+                type: string
+                description: Código que identifica un canal
+                example: APP
+          delegate:
+            required:
+              - identification
+            properties:
+              identification:
+                required:
+                  - type
+                  - number
+                type: object
+                description: Bloque que contiene información de la identidad de un cliente
+                properties:
+                  type:
+                    type: string
+                    description: Tipo de documento de identificación del usuario titular
+                    example: TIPDOC_FS001
+                  number:
+                    type: string
+                    description: Número de documento de identificación del usuario titular
+                    example: 18004111
+          owner:
+            required:
+              - identification
+            properties:
+              identification:
+                required:
+                  - type
+                  - number
+                type: object
+                description: Bloque que contiene información de la identidad de un cliente
+                properties:
+                  type:
+                    type: string
+                    description: Tipo de documento de identificación del usuario titular
+                    example: TIPDOC_FS001
+                  number:
+                    type: string
+                    description: Número de documento de identificación del usuario titular
+                    example: 123456789
+  post_responseretrieveRelationsDetail:
+    type: object
+    required:
+      - meta
+      - data
+    properties:
+      meta:
+        $ref: '#/definitions/meta'
+      data:
+        required:
+          - relations
+        type: object
+        properties:
+          relations:
+            required:
+              - identifier
+              - status
+              - identity
+              - creationDate
+            type: object
+            description: >-
+              Bloque que contiene información de las relaciones que tiene un
+              usuario como titular
+            properties:
+              identifier:
+                type: string
+                description: >-
+                  Corresponde al código único alfanumérico de relación. Se
+                  genera de forma aleatoria.
+                example: REL12234DS343
+              status:
+                type: string
+                description: Corresponde al estado de la delegación.
+                example: PENDIENTE
+              identity:
+                type: object
+                properties:
+                  AID:
+                    type: string
+                    description: Valor obligatorio
+                    example: 1D3NT1F1C4D0RUN1C0EJEMPLO3
+                  AIDCreator:
+                    type: string
+                    description: Valor obligatorio
+                    example: 1D3NT1F1C4D0RUN1C0EJEMPLO3
+              creationDate:
+                type: string
+                description: Valor obligatorio
+                example: 2023-09-28 14:30:45:789
+              updateDate:
+                type: string
+                description: Valor opcional
+                example: 2023-09-28 14:30:45:789
+  meta:
+    description: Datos de trazabilidad e información técnica del mensaje.
+    type: object
+    required:
+      - _messageId
+      - _requestDateTime
+      - _applicationId
+    properties:
+      _messageId:
+        type: string
+        example: c4e6bd04-5149-11e7-b114-b2f933d5fe66
+      _requestDateTime:
+        type: string
+        format: date-time
+        example: '2017-01-24T05:00:00.000Z'
+      _applicationId:
+        type: string
+        example: acxff62e-6f12-42de-9012-3e7304418abd
+    additionalProperties: false
+  failure:
+    type: object
+    description: Mensaje de respuesta cuando ocurre un error.
+    required:
+      - meta
+      - errors
+    properties:
+      meta:
+        $ref: '#/definitions/meta'
+      status:
+        type: number
+        description: >-
+          Código de estado HTTP (status code) asociado al mensaje de error de la
+          respuesta del llamado a la API.
+        example: 409
+      title:
+        type: string
+        description: >-
+          Título asociado al código de estado HTTP (status code) asociado al
+          mensaje de error de la respuesta del llamado a la API.
+        example: Not Found
+      errors:
+        type: array
+        description: Lista de errores detectados
+        uniqueItems: true
+        items:
+          $ref: '#/definitions/error'
+    additionalProperties: false
+  error:
+    type: object
+    description: Objeto que describe el error
+    required:
+      - code
+      - detail
+    properties:
+      code:
+        description: >
+          Código del mensaje de error. Puede contener un código de un error que
+          ocurrió en la API o en su servicio proveedor, este se indica usando
+          los siguientes prefijos:
+
+          - SP: Indica un error de sistema o técnico en el proveedor de la API.
+          Ejemplo: 'SP500'
+
+          - SA: Indica un error de sistema o técnico en la API. Ejemplo: 'SA400'
+
+          - BP: Indica un error o excepción de negocio en el proveedor de la
+          API. Ejemplo: 'BP12345'
+        type: string
+        example: BP409
+      detail:
+        description: Es la descripción funcional del mensaje de error.
+        type: string
+        example: El recurso consultado no fue encontrado
+    additionalProperties: false
+  identityRelations:
+    type: object
+    description: Objeto que describe la identidad
+    required:
+      - CID
+      - AID
+      - stateAlias
+    properties:
+      CID:
+        type: string
+        maxLength: 33
+        description: Identificador de indentidad.
+        example: CID347734FHD7M3473H7H3SM37SM73
+      AID:
+        type: string
+        maxLength: 33
+        description: Identificador Único de Alias.
+        example: AID347734FHD7M3473H7H3SM37SM73
+      stateAlias:
+        type: string
+        maxLength: 50
+        description: Estado de Alias en el canal asociado
+        example: ACTIVO
+    additionalProperties: false
+  identificationRelations:
+    type: object
+    description: Contiene información de la identidad de un usuario
+    required:
+      - type
+      - number
+    properties:
+      type:
+        type: string
+        maxLength: 12
+        description: Corresponde al tipo de documento de identificación del cliente
+        example: TIPDOC_FS003 NIT
+      number:
+        type: string
+        maxLength: 15
+        description: Numero de identificación del cliente
+        example: '1234567890'
+    additionalProperties: false
+  Relations:
+    type: array
+    items:
+      description: >-
+        Objeto que contiene información de las relaciones que tiene un usuario
+        como titular
+      required:
+        - identifier
+        - status
+        - owner
+        - role
+      properties:
+        identifier:
+          type: string
+          maxLength: 33
+          description: >-
+            Corresponde al código único alfanumérico de relación. Se genera de
+            forma aleatoria.
+          example: REL12234DS343
+        status:
+          type: string
+          maxLength: 255
+          description: Estado de la delegación.
+          example: ACTIVO
+        owner:
+          type: object
+          description: Objeto que contiene información del titular
+          required:
+            - identification
+          properties:
+            identification:
+              type: object
+              description: Objeto que contiene información del titular
+              required:
+                - type
+                - number
+                - mdmkey
+              properties:
+                type:
+                  type: string
+                  maxLength: 50
+                  description: >-
+                    Corresponde al tipo de documento de identificación del
+                    cliente titutar.
+                  example: TIPDOC_FS001 CEDULA DE CIUDADANIA
+                number:
+                  type: string
+                  maxLength: 25
+                  description: Numero de identificación del cliente titular
+                  example: 1321312132
+                mdmkey:
+                  type: string
+                  maxLength: 50
+                  description: >-
+                    Código único de identificación de clientes relacionado al
+                    dueño de los productos.
+        role:
+          type: object
+          description: Bloque de información que contiene atributos de role
+          required:
+            - identifier
+            - name
+            - status
+          properties:
+            identifier:
+              type: string
+              description: Identificador de role.
+              example: R2323323232
+            name:
+              type: string
+              description: Nombre de role.
+              example: TESORERO
+            status:
+              type: string
+              maxLength: 255
+              description: Estado de role.
+              example: ACTIVO
+      additionalProperties: false
+schemes:
+  - https
+consumes:
+  - application/vnd.bancolombia.v4+json
+produces:
+  - application/vnd.bancolombia.v4+json
+securityDefinitions:
+  Client Secret:
+    type: apiKey
+    description: Identificacion de la aplicacion consumidora o client_id
+    in: header
+    name: client-secret
+    x-key-type: client_secret
+  Client Id:
+    type: apiKey
+    description: Identificacion de la aplicacion consumidora o client Secrect
+    in: header
+    name: Client-Id
+    x-key-type: client_id
+security:
+  - Client Secret: []
+    Client Id: []
+x-ibm-configuration:
+  enforced: true
+  testable: true
+  phase: realized
+  cors:
+    enabled: true
+  extensions: null
+  properties:
+    catalogName:
+      value: ''
+      description: Nombre del ambiente
+      encoded: false
+    endPoint:
+      value: ''
+      description: ''
+      encoded: false
+    kid:
+      value: ''
+      description: ''
+      encoded: false
+    issuer:
+      value: ''
+      description: ''
+      encoded: false
+    ProfileTLS:
+      value: ''
+      description: ''
+      encoded: false
+    ProfileTLS-JWT:
+      value: apic-tls-profile-aws-ecosistemas-de-riesgos-eks-jwt
+    hostName:
+      value: ''
+      description: ''
+      encoded: false
+  catalogs:
+    development:
+      properties:
+        catalogName: development
+        endPoint: >-
+          https://ecosistemariesgos-dev.apps.ambientesbc.lab/entitlement/relationship/api/v3
+        ProfileTLS: apic-tls-profile-autorizaciones
+        issuer: https://api-aws-dev.apps.ambientesbc.com/entitlement
+        kid: gw-aws-ecosistemas-de-riesgos-jwt
+        ProfileTLS-JWT: apic-tls-profile-aws-ecosistemas-de-riesgos-eks-jwt
+        hostName: gw-autorizaciones-dev.apps.ambientesbc.lab
+    testing:
+      properties:
+        catalogName: testing
+        endPoint: >-
+          https://ecosistemariesgos-qa.apps.ambientesbc.lab/entitlement/relationship/api/v3
+        ProfileTLS: apic-tls-profile-autorizaciones
+        issuer: https://api-aws-qa.apps.ambientesbc.com/entitlement
+        kid: gw-aws-ecosistemas-de-riesgos-jwt
+        ProfileTLS-JWT: apic-tls-profile-aws-ecosistemas-de-riesgos-eks-jwt
+        hostName: gw-autorizaciones-qa.apps.ambientesbc.lab
+    production:
+      properties:
+        catalogName: production
+        endPoint: >-
+          https://ecosistemariesgos-int.apps.bancolombia.com/entitlement/relationship/api/v3
+        ProfileTLS: apic-tls-profile-autorizaciones
+        issuer: https://api-aws.apps.bancolombia.com/entitlement
+        kid: gw-aws-ecosistemas-de-riesgos-jwt
+        ProfileTLS-JWT: apic-tls-profile-aws-ecosistemas-de-riesgos-eks-jwt
+        hostName: gw-autorizaciones.apps.bancolombia.corp
+    sb:
+      properties:
+        catalogName: sb
+        endPoint: https://integracion-int-qa.apps.ambientesbc.lab/
+        ProfileTLS: apic-tls-profile-cluster-eks-integracion-sandbox
+        hostName: gw-sandbox-qa.apps.ambientesbc.lab
+  gateway: datapower-api-gateway
+  assembly:
+    execute:
+      - gatewayscript:
+          version: 2.0.0
+          title: Init-Meta
+          source: |
+            init();
+            function init() { 
+                    let meta = {
+                        _messageId: context.get("request.headers.message-id"),
+                        _requestDateTime: context.get('system.datetime') + context.get('system.timezone'),
+                        _applicationId: context.get('client.app.id')
+                    }
+                    context.set("ctx.meta", meta);
+            }
+      - gatewayscript:
+          version: 2.0.0
+          title: validateHeaderHost
+          source: |
+            validateHostHeader();
+            function validateHostHeader(){
+                var validHostName = context.get("api.properties.hostName");
+                var headerHost = context.get("request.headers.host");
+
+                if(headerHost != validHostName){
+                    context.reject('ParametersException', 'Header Host inválido');
+
+                }
+            }
+      - switch:
+          version: 2.0.0
+          title: switch
+          case:
+            - condition: >-
+                ((request.verb = "POST") and (api.operation.path =
+                "/retrieveRelations"))
+              execute:
+                - switch:
+                    version: 2.0.0
+                    title: switch
+                    case:
+                      - condition: env.path = "sb"
+                        execute:
+                          - gatewayscript:
+                              version: 2.0.0
+                              title: sandbox
+                              source: >-
+                                context.set('message.headers.Origin',
+                                context.get('request.path'))
+
+                                context.set('message.headers.client-id',
+                                context.get('client.app.id'))
+
+                                context.set('message.headers.Content-Type',
+                                'application/vnd.bancolombia.v4+json')
+
+                                context.set('message.headers.x-api-sandbox', 
+                                context.get('api.name'));
+                          - invoke:
+                              version: 2.2.0
+                              title: invoke
+                              backend-type: detect
+                              header-control:
+                                type: blocklist
+                                values: []
+                              parameter-control:
+                                type: allowlist
+                                values: []
+                              http-version: HTTP/1.1
+                              verb: POST
+                              chunked-uploads: false
+                              persistent-connection: false
+                              cache-response: protocol
+                              cache-ttl: 900
+                              stop-on-error:
+                                - ConnectionError
+                              graphql-send-type: detect
+                              tls-profile: $(ProfileTLS):1.0.0
+                              websocket-upgrade: false
+                              target-url: $(endPoint)$(api.root)$(api.operation.path)
+                              follow-redirects: false
+                              timeout: 7
+                      - otherwise:
+                          - gatewayscript:
+                              version: 2.0.0
+                              title: retrieveRelationsRequest
+                              source: "context.message.body.readAsJSON(function(error, request) {\r\n    if (error) {\r\n        context.reject('ParametersException', 'JSON payload request inválido');\r\n    }\r\n    else {\r\n        \r\n        if(validarData(request) ){\r\n            let requestData = request.data;\r\n            let messageId = context.get('request.headers.message-id');\r\n            let channel = context.get('request.headers.channel');\r\n\r\n        if (\r\n             validarObjeto(requestData, 'identity', true) &&\r\n             validarParametro('message-id', messageId, 'String', true, 50, null) && \r\n             validarParametro('channel', channel, 'String', true, 5, 1) && \r\n             validarParametro('alias', requestData.identity.alias, 'String', false, 50, 0) && \r\n             validarParametro('AID', requestData.identity.AID, 'String', false,33, 33)\r\n             \r\n             \r\n            ) {\r\n\r\n        let mapHeaders = {\r\n        \"message-id\": messageId,\r\n        \"Consumer-Acronym\": channel,\r\n        \"Content-Type\":\"application/json\"\r\n        \r\n           };\r\n\r\n        let mapData = {\r\n                        \"data\": {\r\n                            \"identity\": {\r\n                                \"alias\": !requestData.identity.alias ? \"\" : requestData.identity.alias,\r\n                                \"aid\": !requestData.identity.AID ? \"\" : requestData.identity.AID\r\n                            },\r\n                            \r\n                        }\r\n                    };\r\n               \r\n                    context.set('message.headers', mapHeaders)\r\n                    context.set('message.body', mapData)\r\n         }\r\n        }\r\n      }\r\n        \r\n   });\r\n\r\n\r\nfunction validarData(requestBody) {\r\n    let valid = true;\r\n    if (!requestBody) {\r\n         context.reject('ParametersException', 'JSON payload request inválido');\r\n        valid = false;\r\n    } \r\n    validarObjeto(requestBody, 'data',true);\r\n    return valid;\r\n}\r\n\r\nfunction validarObjeto(requestBody, nombre, obligatorio) {\r\n    if (!requestBody.hasOwnProperty(nombre)) {\r\n        \r\n        if (obligatorio){\r\n                context.reject('ParametersException', 'Objecto '+nombre+' requerido');\r\n                return false;\r\n        }else{\r\n            return false;\r\n        }\r\n    }else{\r\n    return true;\r\n    }\r\n}  \r\n\r\n\r\n/**\r\n *   nombre: nombre de la variable que se esta validando\r\n *   val: valor de la variable\r\n *   tipo: String, Integer, Float, Date\r\n *   obligatorio: si la variable es obligatoria o no\r\n *   cifrasInt: longitud de las cifras máximas\r\n *   cifrasDec: longitud de las cifras mínimas\r\n */\r\n/*Funcion para validar los atibutos*/\r\nfunction validarParametro(nombre, val, tipo, obligatorio, cifrasInt, cifrasDec) {\r\n    var mensaje = '';\r\n    if (typeof val == 'undefined' || val == null || val.length == 0) {\r\n        if (obligatorio)\r\n            mensaje = 'Variable ' + nombre + ' indefinida';\r\n    } else {\r\n        var valor = val.toString();\r\n        switch (tipo) {\r\n        case 'String':\r\n            var patternStr = /^[0-9a-zA-ZáéíóúñÁÉÍÚÓÑ#@.,\\-_\\s]+$/;\r\n            var validPatternStr = true;\r\n            validPatternStr = validPatternStr && patternStr.test(valor);\r\n            if (!validPatternStr)\r\n                mensaje = 'Parametro String ' + nombre + ' invalido';\r\n            else if (valor.length > cifrasInt || valor.length < cifrasDec) {\r\n                mensaje = 'Longitud de ' + nombre + ' invalida';\r\n            }\r\n            break;\r\n        case 'Integer':\r\n            if (isNaN(valor))\r\n                mensaje = 'La variable ' + nombre + ' debe ser numerica';\r\n            else if (!Number.isInteger(Number(valor)))\r\n                mensaje = 'La variable ' + nombre + ' debe ser un valor entero';\r\n            else if (valor.length > cifrasInt || valor.length < cifrasDec) {\r\n                mensaje = 'Longitud de ' + nombre + ' invalida';\r\n            }\r\n            break;\r\n        case 'Float':\r\n            if (isNaN(valor))\r\n                mensaje = 'La variable ' + nombre + ' debe ser numerica';\r\n            var vecDecimales = valor.split('.');\r\n            if (vecDecimales[0]) {\r\n                if (vecDecimales[0].length > cifrasInt) {\r\n                    mensaje = 'Cifra entera de ' + nombre + ' invalida';\r\n                }\r\n            }\r\n            if (vecDecimales[1]) {\r\n                if (vecDecimales[1].length > cifrasDec) {\r\n                    mensaje = 'Cifra decimal de ' + nombre + ' invalida';\r\n                }\r\n            }\r\n            break;\r\n        case 'Date':\r\n             var datePattern = /^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}:\\d{2}$/;\r\n            var validDates = true;\r\n            validDates = validDates && datePattern.test(valor);\r\n            if (!validDates)\r\n                mensaje = 'Formato de fecha para ' + nombre + ' invalido, formato valido AAAA-MM-DD HH:MM:SS:ms';\r\n            break;\r\n        }\r\n    }\r\n    if (mensaje != \"\") {\r\n        context.reject('ParametersException', mensaje);\r\n        return false;\r\n    } else\r\n        return true;\r\n}\r\n"
+                          - gatewayscript:
+                              version: 2.0.0
+                              title: JWT-Generator
+                              source: >-
+                                const jwt = require('jwt');
+
+                                const jose = require('jose');  
+
+
+
+                                const dateTime = parseInt(new Date() / 1000);
+
+
+
+                                const claims = {
+                                    'iss': context.get('api.properties.issuer'),
+                                    'sub': 'api-connect-entitlement',
+                                    'token_use': 'access',
+                                    'client_id': 'api-connect-entitlement',
+                                    'scope': 'user-delegation',
+                                    'exp': dateTime +  60, 
+                                    'iat': dateTime
+                                };
+
+
+
+                                let orgName = context.get('api.org.name');  
+
+                                let tlsProfileName =
+                                context.get('api.properties.ProfileTLS-JWT'); 
+
+                                let catalogName =
+                                context.get('api.catalog.name');
+
+                                let privateKeyName = orgName+"_"+catalogName
+                                +"_tlsp-"+tlsProfileName+'V1.0.0-key';
+
+
+
+
+                                let jwsHdr =
+                                jose.createJWSHeader(privateKeyName, 'RS256');
+
+                                jwsHdr.setProtected('kid',
+                                context.get('api.properties.kid')).setProtected('typ',
+                                'JWT');
+
+
+
+                                let encoder = new jwt.Encoder(claims);
+
+
+                                encoder.addOperation('sign', jwsHdr); 
+
+
+                                encoder.encode(function (error, jwtToken) { 
+                                        context.set('message.headers.Authorization', 'Bearer '+ jwtToken);
+                                });
+                          - invoke:
+                              version: 2.2.0
+                              title: invoke
+                              backend-type: json
+                              header-control:
+                                type: blocklist
+                                values:
+                                  - ^client-Id$
+                              parameter-control:
+                                type: allowlist
+                                values: []
+                              http-version: HTTP/1.1
+                              verb: POST
+                              chunked-uploads: true
+                              persistent-connection: true
+                              cache-response: protocol
+                              cache-ttl: 900
+                              stop-on-error:
+                                - ConnectionError
+                              websocket-upgrade: false
+                              target-url: $(endPoint)/retrieve
+                              follow-redirects: false
+                              timeout: 7
+                              tls-profile: $(ProfileTLS):1.0.0
+                          - gatewayscript:
+                              version: 2.0.0
+                              title: retrieveRelationsResponse
+                              source: >-
+                                context.message.body.readAsJSON(function (error,
+                                response) {
+                                    let httpCode = context.get('message.status.code');
+                                    if (error) {
+                                        throwError('SystemException', 'El servicio no está disponible temporalmente. Intente de nuevo más tarde.', httpCode);
+                                    }
+                                    else {
+                                        let responseData = response;
+                                        const meta = context.get('ctx.meta');
+                                        let header_meta = require('header-metadata');
+                                        header_meta.current.headers = {
+                                            "Content-Type": "application/vnd.bancolombia.v4+json; charset=utf-8",
+                                            "API-Version": context.get('api.version'),
+                                            "X-Content-Type-Options": "nosniff",
+                                            "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+                                            "X-Frame-Options": "DENY",
+                                            "Cache-Control": "private, no-cache, no-store, max-age=0, no-transform",
+                                            "Pragma": "no-cache",
+                                            "Expires": 0,
+                                            "Content-Security-Policy": "default-src 'self' *.bancolombia.com"
+                                        };
+
+                                        if (httpCode === 401) {
+                                            context.reject('JWTException', 'JWTError Unauthorized');
+                                        } else if (httpCode == 200) {
+                                            let response = {
+                                                meta: meta
+
+                                                ,
+                                                data: {
+                                                    'identity': responseData.data.identity,
+                                                    'identification': responseData.data.identification,
+                                                    'relations': responseData.data.relations,
+                                                }
+                                            };
+                                            context.set('message.body', response);
+                                        } else {
+                                            context.set('ctx.errors', responseData.errors);
+                                            throwError('BusinessExceptionForRetrieveRelations', responseData.errors.title, httpCode);
+                                        }
+                                    }
+                                });
+
+
+                                function throwError(errorName, detail, code) {
+                                    context.set('ctx.errorCode', code);
+                                    context.reject(errorName, detail);
+                                }
+            - condition: >-
+                ((request.verb = "POST") and (api.operation.path =
+                "/retrieveRelationsDetail"))
+              execute:
+                - switch:
+                    version: 2.0.0
+                    title: switch
+                    case:
+                      - condition: env.path = "sb"
+                        execute:
+                          - gatewayscript:
+                              version: 2.0.0
+                              title: sandbox
+                              source: >-
+                                context.set('message.headers.Origin',
+                                context.get('request.path'))
+
+                                context.set('message.headers.client-id',
+                                context.get('client.app.id'))
+
+                                context.set('message.headers.Content-Type',
+                                'application/vnd.bancolombia.v4+json')
+
+                                context.set('message.headers.x-api-sandbox', 
+                                context.get('api.name'));
+                          - invoke:
+                              version: 2.2.0
+                              title: invoke
+                              backend-type: detect
+                              header-control:
+                                type: blocklist
+                                values: []
+                              parameter-control:
+                                type: allowlist
+                                values: []
+                              http-version: HTTP/1.1
+                              verb: keep
+                              chunked-uploads: true
+                              persistent-connection: true
+                              cache-response: protocol
+                              cache-ttl: 900
+                              stop-on-error:
+                                - ConnectionError
+                              graphql-send-type: detect
+                              websocket-upgrade: false
+                              target-url: $(endPoint)$(api.root)$(api.operation.path)
+                              tls-profile: $(ProfileTLS):1.0.0
+                              timeout: 7
+                      - otherwise:
+                          - gatewayscript:
+                              version: 2.0.0
+                              title: retrieveRelationsDetailRequest
+                              source: >+
+                                context.message.body.readAsJSON(function(error,
+                                request) {
+                                    if (error) {
+                                        context.reject('ParametersException', 'JSON payload request inválido');
+                                    }
+                                    else {
+                                          if (validarObjeto(request, 'data', true)) {
+                                            let requestData = request.data;
+                                            let messageId = context.get('request.headers.message-id');
+                                            let channel = context.get('request.headers.channel');
+                                            let aidCreator = context.get('request.headers.aid-creator');
+
+                                        if (
+                                             validarParametro('message-id', messageId, 'String', true, 50, 1) && 
+                                             validarParametro('channel', channel, 'String', true, 5, 1) && 
+                                             validarParametro('aid-creator', aidCreator, 'String', false, 33, 33) && 
+                                             validarObjeto(request.data, 'channel', true) && 
+                                             validarParametro('channel.code', requestData.channel.code, 'String', true, 5, 1)  && 
+                                             validarObjeto(request.data, 'delegate', true) && 
+                                             validarObjeto(request.data.delegate, 'identification', true) && 
+                                             validarParametro('delegate.identification.type', requestData.delegate.identification.type, 'String', true, 12, 1)  && 
+                                             validarParametro('delegate.identification.number', requestData.delegate.identification.number, 'String', true, 15, 1)&& 
+                                             validarObjeto(request.data, 'owner', true)&& 
+                                             validarObjeto(request.data.owner, 'identification', true) && 
+                                             validarParametro('owner.identification.type', requestData.owner.identification.type, 'String', true, 12, 1)  && 
+                                             validarParametro('owner.identification.number', requestData.owner.identification.number, 'String', true, 15, 1)
+                                             ){
+
+
+                                            let mapHeaders = {
+                                                "MESSAGE_ID": messageId,
+                                                "code": channel,
+                                                "aid-creator": aidCreator,
+                                                "accept": 'application/json',
+                                                "Content-Type": 'application/json'
+                                                 };
+
+                                               let mapData = {
+                                                    "data": {
+                                                        "channel": {
+                                                            "code": requestData.channel.code
+                                                        },
+                                                        "delegate": {
+                                                            "identification": {
+                                                                "type": counterpart(requestData.delegate.identification.type),
+                                                                "number": requestData.delegate.identification.number
+                                                            }
+                                                        },
+                                                        "owner": {
+                                                            "identification": {
+                                                                "type": counterpart(requestData.owner.identification.type),
+                                                                "number": requestData.owner.identification.number
+                                                            }
+                                                        }
+                                                    }
+
+                                                };
+                                            context.set('message.headers', mapHeaders)
+                                            context.set('message.body', mapData)  
+
+                                            }
+                                          }
+                                    }
+                                });
+
+
+
+                                function counterpart (homologar){
+                                    const serverTitle= {
+                                    "TIPDOC_FS000":"CD",
+                                    "TIPDOC_FS001":"CC",
+                                    "TIPDOC_FS002":"CE",
+                                    "TIPDOC_FS003":"NIT",
+                                    "TIPDOC_FS004":"TI",
+                                    "TIPDOC_FS005":"PAS",
+                                    "TIPDOC_FS006":"PNN",
+                                    "TIPDOC_FS007":"PJN",
+                                    "TIPDOC_FS008":"FEIDECOMISO",
+                                    "TIPDOC_FS009":"RC",
+                                    "TIPDOC_FS010":"GRUPO",
+                                    }
+                                    return serverTitle[homologar];
+                                }
+
+
+
+                                function validarObjeto(requestBody, nombre,
+                                obligatorio) {
+                                    if (!requestBody.hasOwnProperty(nombre)) {
+
+                                        if (obligatorio){
+                                                context.reject('ParametersException', 'Objecto '+nombre+' requerido');
+                                                return false;
+                                        }else{
+                                            return false;
+                                        }
+                                    }else{
+                                    return true;
+                                    }
+                                }  
+
+
+
+                                /**
+                                 *   nombre: nombre de la variable que se esta validando
+                                 *   val: valor de la variable
+                                 *   tipo: String, Integer, Float, Date
+                                 *   obligatorio: si la variable es obligatoria o no
+                                 *   cifrasInt: longitud de las cifras máximas
+                                 *   cifrasDec: longitud de las cifras mínimas
+                                 */
+                                /*Funcion para validar los atibutos*/
+
+                                function validarParametro(nombre, val, tipo,
+                                obligatorio, cifrasInt, cifrasDec) {
+                                    var mensaje = '';
+                                    if (typeof val == 'undefined' || val == null || val.length == 0) {
+                                        if (obligatorio)
+                                            mensaje = 'Variable ' + nombre + ' indefinida';
+                                    } else {
+                                        var valor = val.toString();
+                                        switch (tipo) {
+                                        case 'String':
+                                            var patternStr = /^[0-9a-zA-ZáéíóúñÁÉÍÚÓÑ#@.,\-_\s]+$/;
+                                            var validPatternStr = true;
+                                            validPatternStr = validPatternStr && patternStr.test(valor);
+                                            if (!validPatternStr)
+                                                mensaje = 'Parametro String ' + nombre + ' invalido';
+                                            else if (valor.length > cifrasInt || valor.length < cifrasDec) {
+                                                mensaje = 'Longitud de ' + nombre + ' invalida';
+                                            }
+                                            break;
+                                        case 'Integer':
+                                            if (isNaN(valor))
+                                                mensaje = 'La variable ' + nombre + ' debe ser numerica';
+                                            else if (!Number.isInteger(Number(valor)))
+                                                mensaje = 'La variable ' + nombre + ' debe ser un valor entero';
+                                            else if (valor.length > cifrasInt || valor.length < cifrasDec) {
+                                                mensaje = 'Longitud de ' + nombre + ' invalida';
+                                            }
+                                            break;
+                                        case 'Float':
+                                            if (isNaN(valor))
+                                                mensaje = 'La variable ' + nombre + ' debe ser numerica';
+                                            var vecDecimales = valor.split('.');
+                                            if (vecDecimales[0]) {
+                                                if (vecDecimales[0].length > cifrasInt) {
+                                                    mensaje = 'Cifra entera de ' + nombre + ' invalida';
+                                                }
+                                            }
+                                            if (vecDecimales[1]) {
+                                                if (vecDecimales[1].length > cifrasDec) {
+                                                    mensaje = 'Cifra decimal de ' + nombre + ' invalida';
+                                                }
+                                            }
+                                            break;
+                                        case 'Date':
+                                             var datePattern = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}:\d{2}$/;
+                                            var validDates = true;
+                                            validDates = validDates && datePattern.test(valor);
+                                            if (!validDates)
+                                                mensaje = 'Formato de fecha para ' + nombre + ' invalido, formato valido AAAA-MM-DD HH:MM:SS:ms';
+                                            break;
+                                        }
+                                    }
+                                    if (mensaje != "") {
+                                        context.reject('ParametersException', mensaje);
+                                        return false;
+                                    } else
+                                        return true;
+                                }
+
+                          - gatewayscript:
+                              version: 2.0.0
+                              title: JWT-Generator
+                              source: >-
+                                const jwt = require('jwt');
+
+                                const jose = require('jose');  
+
+
+
+                                const dateTime = parseInt(new Date() / 1000);
+
+
+
+                                const claims = {
+                                    'iss': context.get('api.properties.issuer'),
+                                    'sub': 'api-connect-entitlement',
+                                    'token_use': 'access',
+                                    'client_id': 'api-connect-entitlement',
+                                    'scope': 'user-delegation',
+                                    'exp': dateTime +  60, 
+                                    'iat': dateTime
+                                };
+
+
+
+                                let orgName = context.get('api.org.name');  
+
+                                let tlsProfileName =
+                                context.get('api.properties.ProfileTLS-JWT'); 
+
+                                let catalogName =
+                                context.get('api.catalog.name');
+
+                                let privateKeyName = orgName+"_"+catalogName
+                                +"_tlsp-"+tlsProfileName+'V1.0.0-key';
+
+
+
+
+                                let jwsHdr =
+                                jose.createJWSHeader(privateKeyName, 'RS256');
+
+                                jwsHdr.setProtected('kid',
+                                context.get('api.properties.kid')).setProtected('typ',
+                                'JWT');
+
+
+
+                                let encoder = new jwt.Encoder(claims);
+
+
+                                encoder.addOperation('sign', jwsHdr); 
+
+
+                                encoder.encode(function (error, jwtToken) { 
+                                        context.set('message.headers.Authorization', 'Bearer '+ jwtToken);
+                                });
+                          - invoke:
+                              version: 2.2.0
+                              title: invoke
+                              backend-type: detect
+                              header-control:
+                                type: blocklist
+                                values: []
+                              parameter-control:
+                                type: allowlist
+                                values: []
+                              http-version: HTTP/1.1
+                              verb: keep
+                              chunked-uploads: true
+                              persistent-connection: true
+                              cache-response: protocol
+                              cache-ttl: 900
+                              stop-on-error:
+                                - ConnectionError
+                              graphql-send-type: detect
+                              websocket-upgrade: false
+                              target-url: $(endPoint)/getRelationshipByDocument
+                              tls-profile: $(ProfileTLS):1.0.0
+                              timeout: 7
+                          - gatewayscript:
+                              version: 2.0.0
+                              title: retrieveRelationsDetailResponse
+                              source: >-
+                                context.message.body.readAsJSON(function(error,
+                                response) {
+                                    let httpCode = context.get('message.status.code');
+                                    if (error) {
+                                        throwError('SystemException', 'El servicio no está disponible temporalmente. Intente de nuevo más tarde.', httpCode );
+                                    }
+                                    else {
+                                        let responseData = response;
+                                        const meta = context.get('ctx.meta');
+                                        let header_meta = require('header-metadata');
+                                            header_meta.current.headers = {
+                                                "Content-Type": "application/vnd.bancolombia.v4+json; charset=utf-8",
+                                                "API-Version":context.get('api.version'),
+                                                "X-Content-Type-Options": "nosniff",
+                                                "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+                                                "X-Frame-Options": "DENY",
+                                                "Cache-Control": "private, no-cache, no-store, max-age=0, no-transform",
+                                                "Pragma": "no-cache",
+                                                "Expires": 0,
+                                                "Content-Security-Policy": "default-src 'self' *.bancolombia.com"
+                                            };
+
+                                        if (httpCode === 401) {
+                                           context.reject('JWTException', 'JWTError Unauthorized');
+                                        }else if (httpCode == 200) {
+                                                let response = {
+                                                    meta:meta,
+                                                    data: responseData.data
+                                                };
+                                        context.set('message.body', response);
+                                            }else {
+                                                    context.set('ctx.errors', responseData.errors);
+                                                    throwError('BusinessException',  responseData.errors.title, httpCode);
+                                            }
+                                        }       
+                                });
+
+
+
+                                function throwError(errorName, detail, code) {
+                                    context.set('ctx.errorCode', code);
+                                    context.reject(errorName, detail);
+                                }
+            - condition: >-
+                ($httpVerb() = 'HEAD' and $operationPath() =
+                '/security-access-entitlement-relations-information/health')
+              execute:
+                - gatewayscript:
+                    version: 2.0.0
+                    title: Set-headers
+                    source: |-
+                      let header_meta = require('header-metadata');
+
+                      header_meta.current.headers = {
+                          "Content-Type": "application/vnd.bancolombia.v4+json; charset=utf-8",
+                          "API-Version": context.get('api.version'),
+                          "X-Content-Type-Options": "nosniff",
+                          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+                          "X-Frame-Options": "DENY",
+                          "Cache-Control": "private, no-cache, no-store, max-age=0, no-transform",
+                          "Pragma": "no-cache",
+                          "Expires": 0,
+                          "Content-Security-Policy": "default-src 'self' *.bancolombia.com"
+                      }
+    catch:
+      - errors:
+          - ConnectionError
+        execute:
+          - gatewayscript:
+              title: connection-error
+              version: 2.0.0
+              source: |-
+                let failure = {
+                    meta: context.get('ctx.meta'),
+                    errors: [{
+                            status: 504,
+                            title: 'Gateway Timeout',
+                            'errors': [{
+                                    'code': 'SA504',
+                                    'detail': 'No se recibió respuesta del servidor en el tiempo esperado'
+                                }]
+                        }]
+                };
+
+                context.message.body.write(failure);
+                context.set('message.status.code', 504);
+
+                let header_meta = require('header-metadata');
+                header_meta.current.remove('X-Backside-Transport');
+                header_meta.current.headers = {
+                  'Content-type': 'application/vnd.bancolombia.v4+json; charset=utf-8',
+                  'API-Version': context.get('api.version'),
+                  'Message-id': context.get('request.headers.message-id') || '',
+                  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+                  'X-Frame-Options': 'DENY',
+                  'Content-Security-Policy': 'default-src \'self\' *.bancolombia.com',
+                  'X-Content-Type-Options': 'nosniff',
+                  'Cache-Control': 'private, no-cache, no-store, max-age=0, no-transfor',
+                  Pragma: 'no-cache',
+                  Expires: '0'
+                };
+                context.set('header_meta', header_meta.current.headers);
+      - errors:
+          - ParametersException
+        execute:
+          - gatewayscript:
+              title: parameters-exception
+              version: 2.0.0
+              source: |-
+                context.message.statusCode = 400;
+                let description = context.get("error.message");
+                const failure = {
+                    meta: context.get('ctx.meta'),
+                    status: context.message.statusCode,
+                    title: context.message.reasonPhrase,
+                    errors: [{
+                            'code': 'SA' + context.message.statusCode,
+                            'detail': description
+                        }]    
+                };
+                context.message.body.write(failure);
+
+                let header_meta = require('header-metadata');
+                header_meta.current.remove('X-Backside-Transport');
+                header_meta.current.headers = {
+                  'Content-type': 'application/vnd.bancolombia.v4+json; charset=utf-8',
+                  'API-Version': context.get('api.version'),
+                  'Message-id': context.get('request.headers.message-id') || '',
+                  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+                  'X-Frame-Options': 'DENY',
+                  'Content-Security-Policy': 'default-src \'self\' *.bancolombia.com',
+                  'X-Content-Type-Options': 'nosniff',
+                  'Cache-Control': 'private, no-cache, no-store, max-age=0, no-transfor',
+                  Pragma: 'no-cache',
+                  Expires: '0'
+                };
+                context.set('header_meta', header_meta.current.headers);
+      - errors:
+          - JWTException
+        execute:
+          - gatewayscript:
+              title: JWT-exception
+              version: 2.0.0
+              source: |-
+                context.message.statusCode = 401;
+                let description = context.get("error.message");
+                const failure = {
+                    meta: context.get('ctx.meta'),
+                    status: context.message.statusCode,
+                    title: context.message.reasonPhrase,
+                    errors: [{
+                            'code': 'SA' + context.message.statusCode,
+                            'detail': description
+                        }]    
+                };
+                context.message.body.write(failure);
+
+                let header_meta = require('header-metadata');
+                header_meta.current.remove('X-Backside-Transport');
+                header_meta.current.headers = {
+                  'Content-type': 'application/vnd.bancolombia.v4+json; charset=utf-8',
+                  'API-Version': context.get('api.version'),
+                  'Message-id': context.get('request.headers.message-id') || '',
+                  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+                  'X-Frame-Options': 'DENY',
+                  'Content-Security-Policy': 'default-src \'self\' *.bancolombia.com',
+                  'X-Content-Type-Options': 'nosniff',
+                  'Cache-Control': 'private, no-cache, no-store, max-age=0, no-transfor',
+                  Pragma: 'no-cache',
+                  Expires: '0'
+                };
+                context.set('header_meta', header_meta.current.headers);
+      - errors:
+          - BusinessException
+        execute:
+          - gatewayscript:
+              title: business-exception
+              version: 2.0.0
+              source: |-
+                context.message.statusCode =context.get('ctx.errorCode');
+                let errors = context.get('ctx.errors');
+                let failure = {
+                    meta: context.get('ctx.meta'),
+                    title: context.message.reasonPhrase,
+                    status: context.message.statusCode,
+                    errors: []
+                };
+
+                for (var i = 0; i < errors.length; i++) {
+                    var error = errors[i];
+                    failure.errors.push({
+                            code: error.code,
+                            detail: error.detail
+                    });    
+                }
+
+                context.message.body.write(failure);
+
+
+                let header_meta = require('header-metadata');
+                header_meta.current.remove('X-Backside-Transport');
+                header_meta.current.headers = {
+                  'Content-type': 'application/vnd.bancolombia.v4+json; charset=utf-8',
+                  'API-Version': context.get('api.version'),
+                  'Message-id': context.get('request.headers.message-id') || '',
+                  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+                  'X-Frame-Options': 'DENY',
+                  'Content-Security-Policy': 'default-src \'self\' *.bancolombia.com',
+                  'X-Content-Type-Options': 'nosniff',
+                  'Cache-Control': 'private, no-cache, no-store, max-age=0, no-transfor',
+                  Pragma: 'no-cache',
+                  Expires: '0'
+                };
+                context.set('header_meta', header_meta.current.headers);
+      - errors:
+          - BusinessExceptionForRetrieveRelations
+        execute:
+          - gatewayscript:
+              title: business-exception-for-retrieve-relations
+              version: 2.0.0
+              source: |-
+                context.message.statusCode =context.get('ctx.errorCode');
+                let errors = context.get('ctx.errors');
+                let failure = {
+                    meta: context.get('ctx.meta'),
+                    title: context.message.reasonPhrase,
+                    status: context.message.statusCode,
+                    errors: []
+                };
+
+                for (var i = 0; i < errors.length; i++) {
+                    var error = errors[i];
+                    failure.errors.push({
+                            code: 'BP'+error.code,
+                            detail: error.detail
+                    });    
+                }
+
+                context.message.body.write(failure);
+
+
+                let header_meta = require('header-metadata');
+                header_meta.current.remove('X-Backside-Transport');
+                header_meta.current.headers = {
+                  'Content-type': 'application/vnd.bancolombia.v4+json; charset=utf-8',
+                  'API-Version': context.get('api.version'),
+                  'Message-id': context.get('request.headers.message-id') || '',
+                  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+                  'X-Frame-Options': 'DENY',
+                  'Content-Security-Policy': 'default-src \'self\' *.bancolombia.com',
+                  'X-Content-Type-Options': 'nosniff',
+                  'Cache-Control': 'private, no-cache, no-store, max-age=0, no-transfor',
+                  Pragma: 'no-cache',
+                  Expires: '0'
+                };
+                context.set('header_meta', header_meta.current.headers);
+      - errors:
+          - SystemException
+        execute:
+          - gatewayscript:
+              title: system-exception
+              version: 2.0.0
+              source: |-
+                context.message.statusCode =context.get('ctx.errorCode');
+                let description = context.get("error.message");
+
+                let failure = {
+                    meta: context.get('ctx.meta'),
+                    title: context.message.reasonPhrase,
+                    status: context.message.statusCode,
+                    'errors': [{
+                                    code: 'SP' + context.message.statusCode,
+                                    detail: description
+                    }]
+                };
+                context.message.body.write(failure);
+
+                let header_meta = require('header-metadata');
+                header_meta.current.remove('X-Backside-Transport');
+                header_meta.current.headers = {
+                  'Content-type': 'application/vnd.bancolombia.v4+json; charset=utf-8',
+                  'API-Version': context.get('api.version'),
+                  'Message-id': context.get('request.headers.message-id') || '',
+                  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+                  'X-Frame-Options': 'DENY',
+                  'Content-Security-Policy': 'default-src \'self\' *.bancolombia.com',
+                  'X-Content-Type-Options': 'nosniff',
+                  'Cache-Control': 'private, no-cache, no-store, max-age=0, no-transfor',
+                  Pragma: 'no-cache',
+                  Expires: '0'
+                };
+                context.set('header_meta', header_meta.current.headers);
+      - errors:
+          - predeterminado
+        execute:
+          - gatewayscript:
+              title: default-exception
+              version: 2.0.0
+              source: |-
+                let failure = {
+                    meta: context.get('ctx.meta'),
+                    status: 500,
+                    title: 'Internal Server Error',
+
+                    'errors': [
+                        {
+                            code: 'SA500',
+                            detail: 'Ha ocurrido un error inesperado en el servidor'
+                        }]    
+                };
+                context.message.body.write(failure);
+                context.set('message.status.code', 500);
+
+                let header_meta = require('header-metadata');
+                header_meta.current.remove('X-Backside-Transport');
+                header_meta.current.headers = {
+                  'Content-type': 'application/vnd.bancolombia.v4+json; charset=utf-8',
+                  'API-Version': context.get('api.version'),
+                  'Message-id': context.get('request.headers.message-id') || '',
+                  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+                  'X-Frame-Options': 'DENY',
+                  'Content-Security-Policy': 'default-src \'self\' *.bancolombia.com',
+                  'X-Content-Type-Options': 'nosniff',
+                  'Cache-Control': 'private, no-cache, no-store, max-age=0, no-transfor',
+                  Pragma: 'no-cache',
+                  Expires: '0'
+                };
+                context.set('header_meta', header_meta.current.headers);
+    finally: []
+  compatibility:
+    enforce-required-params: false
+    request-headers: true
+    migrated-api: true
+  buffering: true
+  activity-log:
+    enabled: true
+    success-content: activity
+    error-content: payload
+  application-authentication: {}
+  type: rest
+x-API-Authors:
+  Design:
+    name: ''
+    email: ''
+  Development:
+    name: ''
+    email: ''
+  Review:
+    name: ''
+    email: ''
+x-API-Protocol:
+  Protocols: HTTPS
