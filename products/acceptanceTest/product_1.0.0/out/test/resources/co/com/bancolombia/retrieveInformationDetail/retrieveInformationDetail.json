@@ -1,0 +1,19 @@
+{
+  "data": {
+    "channel": {
+      "code": "SVN"
+    },
+    "delegate": {
+      "identification": {
+        "type": "TIPDOC_FS001",
+        "number": "5007702882"
+      }
+    },
+    "owner": {
+      "identification": {
+        "type": "TIPDOC_FS001",
+        "number": "1122334455"
+      }
+    }
+  }
+}
